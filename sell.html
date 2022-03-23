@@ -61,6 +61,12 @@
         .sqsrte-text-color--darkAccent { color: hsl(240, 0%, 30%); }
       
     </style>
+    <script>
+      function confirm(){
+        alert("Thank you, your listing has been recieved and will be reviewed.")
+        window.location.replace("yourlisting.html")
+      }
+    </script>
   </head>
 
   <body
@@ -875,16 +881,16 @@
       
     '
   >
+
     <div
       class="content"
-      
+      style="margin: auto;"
     >
       
       
       
       
-      
-      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-621e9e5ead728967a96474be"><div class="row sqs-row"><div class="col sqs-col-6 span-6"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-50ae8fc9c8a0db541644"><div class="sqs-block-content"><h3 style="white-space:pre-wrap;">Create your listing</h3></div></div><div class="sqs-block form-block sqs-block-form" data-block-type="9" id="block-05b41f4a9874aad6395d"><div class="sqs-block-content">
+      <div  data-type="page-section" id="page-section-621e9e5ead728967a96474be"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-50ae8fc9c8a0db541644"><div class="sqs-block-content"><h3 style="white-space:pre-wrap;">Create your listing</h3></div></div><div class="sqs-block form-block sqs-block-form" data-block-type="9" id="block-05b41f4a9874aad6395d"><div class="sqs-block-content">
 
 
 
@@ -897,22 +903,8 @@
   <div class="form-inner-wrapper">
     <form
        data-form-id="621e9e5ead728967a96474ba"
-       data-success-redirect=""
-       autocomplete="on"
        
-       method="POST"
-       action="https://turkey-circle-h5zy.squarespace.com"
-       novalidate
-       onsubmit="return (function (form) {
-  Y.use('squarespace-form-submit', 'node', function usingFormSubmit(Y) {
-    (new Y.Squarespace.FormSubmit(form)).submit({
-      formId: '621e9e5ead728967a96474ba',
-      collectionId: '621e9e5ead728967a96474bc',
-      objectName: 'page-section-621e9e5ead728967a96474be'
-    });
-  });
-  return false;
-})(this);"
+       onsubmit="confirm();return false;"
        
     >
       
@@ -1255,7 +1247,7 @@
               <fieldset id="address-5f34b150-2f12-4142-ae23-859265009876" class="form-item fields address">
                 
             <legend class="title">
-              House Address
+              Listing Information
               
             </legend>
           
@@ -1340,6 +1332,7 @@
                       spellcheck="false"
                       data-title="Country"
                       
+                      
                     />
                     <span class="caption-text">Country</span>
                   </label>
@@ -1382,7 +1375,7 @@
                     id="currency-29425026-db5c-46e2-a99d-e25751ec7433-field"
                     autocomplete="false"
                     spellcheck="false"
-                    
+                    style="width:10%;"
                 />
                 <div class="prefix">$</div>
               </div>
@@ -1436,7 +1429,7 @@
               <div id="number-624f057f-5ad4-4d18-8a29-a31988661465" class="form-item field number">
                 
             <label class="title" for="number-624f057f-5ad4-4d18-8a29-a31988661465-field">
-              Size
+              Size (in feet)
               
             </label>
           
@@ -1446,7 +1439,7 @@
                     type="text"
                     id="number-624f057f-5ad4-4d18-8a29-a31988661465-field"
                     spellcheck="false"
-                    
+                    style="width:10%;"
                     
                 />
               </div>
@@ -1524,7 +1517,13 @@
                   
                     <option value="Detatched">Detatched</option>
                   
-                    <option value="Option 2">Option 2</option>
+                    <option value="Option 2">Semidetached </option>
+
+                    <option value="Option 2">Townhouse </option>
+
+                    <option value="Option 2">Condo </option>
+                    
+
                   
                   <optgroup label=""></optgroup>
                 </select>
@@ -1566,7 +1565,7 @@
                     class="field-element text"
                     type="text"
                     id="text-8ad4373c-170f-4e38-b92a-0af2a84b24cf-field"
-                    
+                    style="width:5%;"
                     
                 />
               </div>
@@ -1627,7 +1626,7 @@
                     class="field-element text"
                     type="text"
                     id="text-a5d35fbe-e8eb-4e02-8910-429c21d416d6-field"
-                    
+                    style="width:5%;"
                     
                 />
               </div>
@@ -1711,12 +1710,29 @@
                 
                 <div class="option"><label><input type="checkbox" name="checkbox-43bc682f-e673-4a3b-8941-58a080f2b11a-field" value="AC"/> AC</label></div>
                 
-                <div class="option"><label><input type="checkbox" name="checkbox-43bc682f-e673-4a3b-8941-58a080f2b11a-field" value="....."/> .....</label></div>
+                <div class="option"><label><input type="checkbox" value="....."/> Air Conditioning</label></div>
+
+                <div class="option"><label><input type="checkbox" value="....."/> Central Heat</label></div>
+
+                <div class="option"><label><input type="checkbox" value="....."/> Garage</label></div>
+
+
                 
+
               </fieldset>
             
+              <legend class="title">
+                Additional features
+                
+              </legend>
 
-            
+              <input class="field-element text" type="text" id="text-3e15a2d8-c53f-4686-980c-94a643853a75-field">
+              
+              <legend class="title">
+                Description
+                
+              </legend>
+              <textarea class="field-element" id="textarea-124ee60b-0911-4664-8a06-46c389dd36f7-field" spellcheck="false" style="width: 80%;" ></textarea>
 
             
 
@@ -1733,8 +1749,17 @@
         
 
         </div>
-
-      
+        <div id="section-deab906d-905b-4946-976b-6879e35a9179" class="form-item section underline">
+          <div class="title"></div>
+          
+        </div>
+        <div id="s  " class="form-item section underline" style="height: 6px;">
+          <div class="title"></div>
+          
+        </div>
+<img src="./pictures/photos.PNG" width="100%">
+Upload proof of ownership
+<img src="./pictures/proof.PNG" width="100%">
 
       
 
@@ -1749,8 +1774,9 @@
       >
         <input
           class="button sqs-system-button sqs-editable-button sqs-button-element--primary"
-          type="submit"
-          value="Submit"
+          type="button"
+          value="Submit listing"
+          onclick="confirm()"
         />
       </div>
       
@@ -1761,98 +1787,7 @@
     </form>
   </div>
 </div>
-</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_1_1646265132656_28268"><div class="sqs-block-content"><p class="" style="white-space:pre-wrap;">Summitted listings will be reviewed by an agent before being posted. </p></div></div></div><div class="col sqs-col-6 span-6"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_1_1646265132656_23418"><div class="sqs-block-content">&nbsp;</div></div><div class="sqs-block spacer-block sqs-block-spacer" data-aspect-ratio="3.4976152623211445" data-block-type="21" id="block-yui_3_17_2_1_1646265132656_25349"><div class="sqs-block-content">&nbsp;</div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1646266576856_4242"><div class="sqs-block-content">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-    
-  
-    <div
-        class="
-          image-block-outer-wrapper
-          layout-caption-below
-          design-layout-inline
-          combination-animation-site-default
-          individual-animation-site-default
-          individual-text-animation-site-default
-        "
-        data-test="image-block-inline-outer-wrapper"
-    >
-
-      
-
-      
-        <figure
-            class="
-              sqs-block-image-figure
-              intrinsic
-            "
-            style="max-width:2835px;"
-        >
-          
-        
-        
-
-        
-          
-            
-          <div
-              
-              
-              class="image-block-wrapper"
-              data-animation-role="image"
-              
-  
-
-          >
-            <div class="sqs-image-shape-container-element
-              
-          
-        
-              has-aspect-ratio
-            " style="
-                position: relative;
-                
-                  padding-bottom:26.984128952026367%;
-                
-                overflow: hidden;
-              "
-              >
-              <img src="./pictures/photos.PNG">
-              <noscript><img src="./pictures/photos.PNG" alt="" /></noscript><img class="thumb-image" data-src="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/946c6b1b-0d8e-4fd2-b1dd-c13d8701416d/Capture.PNG" data-image="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/946c6b1b-0d8e-4fd2-b1dd-c13d8701416d/Capture.PNG" data-image-dimensions="2835x765" data-image-focal-point="0.5,0.5" alt="" data-load="false" data-image-id="6220094b49548f548d8d6731" data-type="image" />
-            </div>
-          </div>
-        
-          
-        
-
-        
-      
-        </figure>
-      
-
-    </div>
-  
-
-
-  
-
-
-</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_1_1646265132656_26937"><div class="sqs-block-content"><p class="" style="white-space:pre-wrap;">Upload proof of ownership</p></div></div><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1646266576856_11084"><div class="sqs-block-content">
 
 
 
@@ -1872,71 +1807,18 @@
 
     
   
-    <div
-        class="
-          image-block-outer-wrapper
-          layout-caption-below
-          design-layout-inline
-          combination-animation-site-default
-          individual-animation-site-default
-          individual-text-animation-site-default
-        "
-        data-test="image-block-inline-outer-wrapper"
-    >
-
-      
-
-      
-        <figure
-            class="
-              sqs-block-image-figure
-              intrinsic
-            "
-            style="max-width:2770px;"
-        >
-          
-        
-        
-
-        
-          
-            
-          <div
-              
-              
-              class="image-block-wrapper"
-              data-animation-role="image"
-              
+    
   
 
-          >
-            <div class="sqs-image-shape-container-element
-              
-          
-        
-              has-aspect-ratio
-            " style="
-                position: relative;
-                
-                  padding-bottom:20.324909210205078%;
-                
-                overflow: hidden;
-              "
-              >
-              <img src="./pictures/proof.PNG">
-              <noscript><img src="./pictures/proof.PNG" alt="" /></noscript><img class="thumb-image" data-src="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/9570cc28-e702-4b02-a363-50324b6a0c1c/Capture2.PNG" data-image="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/9570cc28-e702-4b02-a363-50324b6a0c1c/Capture2.PNG" data-image-dimensions="2770x563" data-image-focal-point="0.5,0.5" alt="" data-load="false" data-image-id="6220098e4930d715099c6436" data-type="image" />
-            </div>
-          </div>
-        
-          
-        
+   
 
-        
-      
-        </figure>
-      
 
-    </div>
+
+  
+
+    
+  
+  
   
 
 
@@ -1945,6 +1827,7 @@
 
 </div></div></div></div></div>
     </div>
+
   </div>
   
 </section>
