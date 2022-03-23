@@ -7,7 +7,7 @@
     <!-- This is Squarespace. --><!-- turkey-circle-h5zy -->
 <base href="">
 <meta charset="utf-8" />
-<title>$xxx,xxx                123 Address Road, City, Province &mdash; Real Estate Site</title>
+<title>123 Address Road, City, Province</title>
 <link rel="shortcut icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico"/>
 <link rel="canonical" href="https://turkey-circle-h5zy.squarespace.com/buy/house1"/>
 <meta property="og:site_name" content="Real Estate Site"/>
@@ -68,6 +68,12 @@
         .sqsrte-text-color--darkAccent { color: hsl(240, 0%, 30%); }
       
     </style>
+    <script>
+      function offered(){
+        var value = document.getElementById("currency-a34be9bc-1987-431d-83fb-749f824605be-field").value;
+        alert("Thank you, your offer of: $" + value + " has been sent.")
+      }
+    </script>
   </head>
 
   <body
@@ -1596,22 +1602,7 @@
   <div class="form-inner-wrapper">
     <form
        data-form-id="62200d77a48c1a26df580d7b"
-       data-success-redirect=""
-       autocomplete="on"
-       
-       method="POST"
-       action="https://turkey-circle-h5zy.squarespace.com"
-       novalidate
-       onsubmit="return (function (form) {
-  Y.use('squarespace-form-submit', 'node', function usingFormSubmit(Y) {
-    (new Y.Squarespace.FormSubmit(form)).submit({
-      formId: '62200d77a48c1a26df580d7b',
-      collectionId: '621e98281b7d863bc40aff55',
-      objectName: 'page-section-62200d62c0dfb468c2fdad31'
-    });
-  });
-  return false;
-})(this);"
+       onsubmit="offered();return false"
        
     >
       
@@ -1697,8 +1688,10 @@
       >
         <input
           class="button sqs-system-button sqs-editable-button sqs-button-element--primary"
-          type="submit"
+          type="button"
+          id="offer"
           value="Submit Offer"
+          onclick="offered()"
         />
       </div>
       
