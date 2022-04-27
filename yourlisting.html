@@ -1042,71 +1042,79 @@
 
 
                         <style>
+
+                          .span {
+                              background-color: white;
+                              padding: 10px;
+                              border-style: solid; 
+                          }
+                
                           .accordion {
                             background-color: white;
                             color: black;
                             cursor: pointer;
                             padding: 18px;
-                            width: 100%;
+                            width: 9%;
                             border: none;
                             text-align: left;
                             outline: none;
                             font-size: 18px;
                             transition: 0.4s;
                           }
-
-                          .active,
-                          .accordion:hover {
-                            background-color: #ccc;
+                          
+                          .active, .accordion:hover {
+                            background-color: white; 
                           }
-
+                        
                           .accordion2 {
-                            background-color: lightskyblue;
-                            color: black;
-                            cursor: pointer;
-                            padding: 5px;
-                            border: none;
-                            text-align: left;
-                            outline: none;
-                            font-size: 18px;
-                            transition: 0.4s;
+                          background-color: lightskyblue;
+                          color: black;
+                          cursor: pointer;
+                          padding: 5px;
+                          border: none;
+                          text-align: left;
+                          outline: none;
+                          font-size: 18px;
+                          transition: 0.4s;
                           }
-
-                          .active,
-                          .accordion2:hover {
-                            background-color: #ccc;
+                        
+                          .active, .accordion2:hover {
+                          background-color: white; 
                           }
-
+                          
                           .panel {
-                            padding: 0 18px;
+                            padding:  0 18px;
                             display: none;
                             background-color: white;
                             overflow: hidden;
                           }
-                        </style>
-
-                        <button class="accordion">Offer 1</button>
+                          </style>
+                        
+                        <button class="accordion"><span class="span">Offer 1</span></button>
                         <div class="panel">
                           <p>&emsp;<b>John Smith</b></p>
                           <p>&emsp;<b>cell:</b> (444) 444 - 4444 &emsp; <b>email:</b> john_smith@fakeaccount.com</p>
                           <p>&emsp;<b>Offer:</b> $500,000 </p>
                           <p>&emsp;<button class="accordion2"> <b>Accept Offer</b> </button></p>
+                          <p>&emsp;<button class="accordion2"> <b>Reject Offer</b> </button></p>
                         </div>
-
-                        <button class="accordion">Offer 2</button>
+                        <br>
+                        <button class="accordion"><span class="span">Offer 2</span></button>
                         <div class="panel">
                           <p>&emsp;<b>Jane Watters</b></p>
                           <p>&emsp;<b>cell:</b> (444) 444 - 4444 &emsp; <b>email:</b> john_smith@fakeaccount.com</p>
                           <p>&emsp;<b>Offer:</b> $500,000 </p>
                           <p>&emsp;<button class="accordion2"><b>Accept Offer</b></button></p>
+                          <p>&emsp;<button class="accordion2"> <b>Reject Offer</b> </button></p>
                         </div>
-
-                        <button class="accordion">Offer 3</button>
+                        <br>
+                        <button class="accordion"><span class="span">Offer 3</span></button>
                         <div class="panel">
                           <p>&emsp;<b>Bill Williams</b></p>
                           <p>&emsp;<b>cell:</b> (444) 444 - 4444 &emsp; <b>email:</b> john_smith@fakeaccount.com</p>
                           <p>&emsp;<b>Offer:</b> $500,000 </p>
                           <p>&emsp;<button class="accordion2"><b>Accept Offer</b></button></p>
+                          <p>&emsp;<button class="accordion2"> <b>Reject Offer</b> </button></p>
                         </div>
 
 

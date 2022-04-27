@@ -882,57 +882,140 @@
                     <div class="sqs-block html-block sqs-block-html" data-block-type="2"
                       id="block-yui_3_17_2_1_1646263900139_8781">
                       <div class="sqs-block-content">
+                        
                         <style>
-                          .accordion {
-                            background-color: white;
-                            color: black;
-                            cursor: pointer;
-                            padding: 18px;
-                            width: 100%;
-                            border: none;
-                            text-align: left;
-                            outline: none;
-                            font-size: 18px;
-                            transition: 0.4s;
-                          }
-
-                          .accordion2 {
-                            background-color: white;
-                            color: black;
-                            cursor: pointer;
-                            padding: 5px;
-                            border: none;
-                            text-align: left;
-                            outline: none;
-                            font-size: 18px;
-                            transition: 0.4s;
-                          }
-
-                          .active,
-                          .accordion:hover {
-                            background-color: #ccc;
-                          }
-
-                          .active,
-                          .accordion2:hover {
-                            background-color: #ccc;
-                          }
-
-                          .panel {
-                            padding: 0 18px;
-                            display: none;
-                            background-color: white;
+                          ul {
+                            list-style-type: none;
+                            margin: 0;
+                            padding: 0;
                             overflow: hidden;
+                            background-color: white;
                           }
-                        </style>
+                          
+                          li {
+                            float: left;
+                          }
+                          
+                          li a, .dropbtn {
+                            display: inline-block;
+                            color: #f9f9f9;
+                            text-align: center;
+                            padding: 14px 16px;
+                            text-decoration: none;
+                          }
+                          
+                          li a:hover, .dropdown:hover .dropbtn {
+                            background-color: #999;
+                          }
+                          
+                          li.dropdown {
+                            display: inline-block;
+                          }
+                          
+                          .dropdown-content {
+                            display: none;
+                            position: absolute;
+                            background-color: #f9f9f9;
+                            min-width: 160px;
+                            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                            z-index: 1;
+                          }
+                          
+                          .dropdown-content a {
+                            color: black;
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            display: block;
+                            text-align: left;
+                          }
+                          
+                          .dropdown-content a:hover {background-color: #f1f1f1;}
+                          
+                          .dropdown:hover .dropdown-content {
+                            display: block;
+                          }
+                  
+                          .span {
+                                background-color: white;
+                                padding: 10px;
+                                border-style: solid; 
+                            }
+                  
+                  
+                  .slidecontainer {
+                    width: 100%;
+                  }
+                  
+                  .slider {
+                    -webkit-appearance: none;
+                    width: 100%;
+                    height: 25px;
+                    background: #d3d3d3;
+                    outline: none;
+                    opacity: 0.7;
+                    -webkit-transition: .2s;
+                    transition: opacity .2s;
+                  }
+                  
+                  .slider:hover {
+                    opacity: 1;
+                  }
+                  
+                  .slider::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 25px;
+                    height: 25px;
+                    background: #04AA6D;
+                    cursor: pointer;
+                  }
+                  
+                  .slider::-moz-range-thumb {
+                    width: 25px;
+                    height: 25px;
+                    background: #04AA6D;
+                    cursor: pointer;
+                  }
+                  
+                          </style>
+                          
+                          <ul>
+                            <li class="dropdown">
+                              <a href="javascript:void(0)" class="dropbtn"><span class="span">Bathrooms</span>  </a>
+                              <div class="dropdown-content">
+                                <a href="javascript:void(0)">1</a>
+                                <a href="javascript:void(0)">2</a>
+                                <a href="javascript:void(0)">3</a>
+                                <a href="javascript:void(0)">4+</a>
+                              </div>
+                            </li>
+                            <li class="dropdown">
+                              <a href="javascript:void(0)" class="dropbtn"><span class="span">Bedrooms</span></a>
+                              <div class="dropdown-content">
+                                <a href="javascript:void(0)">1</a>
+                                <a href="javascript:void(0)">2</a>
+                                <a href="javascript:void(0)">3</a>
+                                <a href="javascript:void(0)">4+</a>
+                              </div>
+                            </li>
+                            
+                            <li class="dropdown">
+                              <a href="javascript:void(0)" class="dropbtn"><span class="span">House Type</span></a>
+                              <div class="dropdown-content">
+                                <a href="javascript:void(0)">Condo</a>
+                                <a href="javascript:void(0)">Single family</a>
+                                <a href="javascript:void(0)">Large Acreage</a>
+                                <a href="javascript:void(0)">Cottage</a>
+                              </div>
+                            </li>
+                  
+                            <div class="slidecontainer">
+                              <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                              <p>Value: <span id="demo"></span></p>
+                            </div>
+                  
+                          </ul>
 
-                        <button class="accordion">Filters</button>
-                        <div class="panel">
-                          <p>&emsp;<button class="accordion2">Condo</button></p>
-                          <p>&emsp;<button class="accordion2">Single family</button> </p>
-                          <p>&emsp;<button class="accordion2">Cottage</button> </p>
-                          <p> &emsp; <button class="accordion2">Large Acreage</button></p>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -943,6 +1026,15 @@
 
         </section>
 
+        <script>
+          var slider = document.getElementById("myRange");
+          var output = document.getElementById("demo");
+          output.innerHTML = slider.value;
+          
+          slider.oninput = function() {
+            output.innerHTML = this.value;
+          }
+          </script>
 
 
         <section data-test="page-section" data-section-theme="" class='page-section
@@ -1086,57 +1178,19 @@
                     <div class="sqs-block html-block sqs-block-html" data-block-type="2"
                       id="block-yui_3_17_2_1_1646263900139_12059">
                       <div class="sqs-block-content">
-                        <style>
-                          .accordion {
-                            background-color: white;
-                            color: black;
-                            cursor: pointer;
-                            padding: 18px;
-                            width: 100%;
-                            border: none;
-                            text-align: left;
-                            outline: none;
-                            font-size: 18px;
-                            transition: 0.4s;
-                          }
 
-                          .accordion2 {
-                            background-color: white;
-                            color: black;
-                            cursor: pointer;
-                            padding: 5px;
-                            border: none;
-                            text-align: left;
-                            outline: none;
-                            font-size: 18px;
-                            transition: 0.4s;
-                          }
+                        <ul>
+                          <li class="dropdown">
+                              <a href="javascript:void(0)" class="dropbtn"><span class="span">Sort Listings</span></a>
+                              <div class="dropdown-content">
+                                <a href="javascript:void(0)">Newest Listing First</a>
+                                <a href="javascript:void(0)">Oldest Listing First</a>
+                                <a href="javascript:void(0)">Most Expensive Listing First</a>
+                                <a href="javascript:void(0)">Least Expensive Listing First</a>
+                              </div>
+                            </li>
+                      </ul>
 
-                          .active,
-                          .accordion:hover {
-                            background-color: #ccc;
-                          }
-
-                          .active,
-                          .accordion2:hover {
-                            background-color: #ccc;
-                          }
-
-                          .panel {
-                            padding: 0 18px;
-                            display: none;
-                            background-color: white;
-                            overflow: hidden;
-                          }
-                        </style>
-
-                        <button class="accordion">Sort</button>
-                        <div class="panel">
-                          <p>&emsp;<button class="accordion2">Newest Listing First</button></p>
-                          <p>&emsp;<button class="accordion2">Oldest Listing First</button> </p>
-                          <p>&emsp;<button class="accordion2">Most Expensive Listing First</button> </p>
-                          <p> &emsp; <button class="accordion2">Least Expensive Listing First</button></p>
-                        </div>
                       </div>
                     </div>
                   </div>
