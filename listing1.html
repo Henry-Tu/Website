@@ -121,9 +121,23 @@
   <link rel="stylesheet" href="ourstyle.css">
 
   <script>
+    
+
     function offered() {
+      let dollarUS = Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    });
       var value = document.getElementById("currency-a34be9bc-1987-431d-83fb-749f824605be-field").value;
-      alert("Thank you, your offer of: $" + value + " has been sent.")
+      if (value <= 0) {
+        alert("Invalid offer");
+      } else {
+        if (confirm("Are you sure you want to submit an offer for:" + dollarUS.format(value) + "?") == true) {
+          alert("Thank you, your offer of: $" + dollarUS.format(value) + " has been sent.");
+        }
+
+      }
+
     }
   </script>
 </head>
@@ -899,7 +913,7 @@
                       <div class="sqs-block-content">
                         <h2>123 Address Rd. Province</h2>
 
-                        
+
                       </div>
                     </div>
                   </div>
@@ -983,7 +997,7 @@
     }' data-test="gallery-slideshow-simple" style="padding-top: 0px;
     padding-bottom: 0px;">
 
-                    <div class="gallery-slideshow-wrapper">
+                    <div class="gallery-slideshow-wrapper" style="margin-bottom: 0px;">
                       <div class="gallery-slideshow-list" data-test="gallery-slideshow-list">
 
                         <figure class="gallery-slideshow-item" data-slide-url="dix6p3gd3s9qlmf3uksxr078zdqnth">
@@ -1319,9 +1333,9 @@
                       id="block-527e4fc197a2ba333d46">
                       <div class="sqs-block-content">
                         <h2>Description</h2>
-                        <p class="" style="white-space:pre-wrap;">$950,000</p>
-                        <p class="" style="white-space:pre-wrap;">6000 Square Feet</p>
-                        <h4 >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        <h5 class="" style="white-space:pre-wrap;">$950,000</h5>
+                        <h5 class="" style="white-space:pre-wrap;">6000 Square Feet</h5>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                           do eiusmod tempor incididunt ut Labore et dolore magna aliqua. Id leo in vitae turpis. Arcu
                           cursus vitae congue mauris. Risus at ultrices mi tempus imperdiet. Scelerisque felis imperdiet
                           proin fermentum leo vel orci. Velit euismod in pellentesque massa placerat duis. Enim nunc
@@ -1460,7 +1474,7 @@
 
 
 
-                                  
+
                                 </div>
 
                               </div>
@@ -1497,42 +1511,44 @@
                     <p class="" style="white-space:pre-wrap;">Groceries R Us</p>
                   </div>
                 </div>
-                <div class="col sqs-col-6 span-12"><div class="mapouter">
-                  <div class="gmap_canvas"><iframe width="1200" height="200" id="gmap_canvas"
-                      src="https://maps.google.com/maps?q=brock%20university&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                      frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                      href="https://www.whatismyip-address.com"></a><br>
-                    <style>
-                      .mapouter {
-                        position: relative;
-                        text-align: right;
-                        height: 200px;
-                        width: 1200px;
-                      }
-                    </style><a href="https://www.embedgooglemap.net">google map code</a>
-                    <style>
-                      .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: 200px;
-                        width: 1200px;
-                      }
-                    </style>
+                <div class="col sqs-col-6 span-12">
+                  <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="1200" height="200" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=brock%20university&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                        href="https://www.whatismyip-address.com"></a><br>
+                      <style>
+                        .mapouter {
+                          position: relative;
+                          text-align: right;
+                          height: 200px;
+                          width: 1200px;
+                        }
+                      </style><a href="https://www.embedgooglemap.net">google map code</a>
+                      <style>
+                        .gmap_canvas {
+                          overflow: hidden;
+                          background: none !important;
+                          height: 200px;
+                          width: 1200px;
+                        }
+                      </style>
+                    </div>
                   </div>
+                  <script>#gmap_canvas { width: 100 %; height: auto; } </script>
                 </div>
-                <script>#gmap_canvas { width: 100 %; height: auto; } </script></div>
-                
-              </div>
-              </div>
 
-
+              </div>
             </div>
+
+
           </div>
+  </div>
 
-        </section>
+  </section>
 
 
-        <section data-test="page-section" data-section-theme="" class='page-section
+  <section data-test="page-section" data-section-theme="" class='page-section
     
       layout-engine-section
     
@@ -1565,12 +1581,12 @@
       &quot;sectionAnimation&quot;: &quot;none&quot;,
       &quot;backgroundMode&quot;: &quot;image&quot;
     }" data-animation="none" style="min-height: 10vh;">
-          <div class="section-background">
+    <div class="section-background">
 
 
 
-          </div>
-          <div class="content-wrapper" style='
+    </div>
+    <div class="content-wrapper" style='
       
         
           
@@ -1579,84 +1595,83 @@
         
       
     '>
-            <div class="content">
+      <div class="content">
 
 
 
 
-              <hr>
-              <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
-                id="page-section-622001b3fb99e369c6fd13ac">
-                <div class="row sqs-row">
-                  <div class="col sqs-col-6 span-6">
-                    <div class="sqs-block html-block sqs-block-html" data-block-type="2"
-                      id="block-yui_3_17_2_1_1646264259963_48821">
-                      <div class="sqs-block-content">
-                        <h2>Contact Information</h2>
-                      </div>
+        <hr>
+        <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
+          id="page-section-622001b3fb99e369c6fd13ac">
+          <div class="row sqs-row">
+            <div class="col sqs-col-6 span-6">
+              <div class="sqs-block html-block sqs-block-html" data-block-type="2"
+                id="block-yui_3_17_2_1_1646264259963_48821">
+                <div class="sqs-block-content">
+                  <h2>Contact Information</h2>
+                </div>
+              </div>
+              <div class="sqs-block html-block sqs-block-html" data-block-type="2"
+                id="block-yui_3_17_2_1_1646264259963_51015">
+                <div class="sqs-block-content">
+                  <p class="" style="white-space:pre-wrap;">Sold by: John Smith</p>
+                  <p class="" style="white-space:pre-wrap;">Phone: (xxx)xxx-xxxx</p>
+                  <p class="" style="white-space:pre-wrap;">Email: johnsmith@mail.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="col sqs-col-4 span-4">
+              <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-622001b34f0f3159ceed9c1d">
+                <div class="sqs-block-content">
+                  <h2>Open house dates</h2>
+                </div>
+              </div>
+              <div class="sqs-block calendar-block sqs-block-calendar"
+                data-block-json="&#123;&quot;collectionId&quot;:null,&quot;hSize&quot;:null,&quot;floatDir&quot;:null&#125;"
+                data-block-type="26" id="block-yui_3_17_2_1_1646264259963_37236">
+                <div class="sqs-block-content">
+                  <img src="./pictures/calendar.PNG" width="100%">
+
+
+                  <div class="sqs-blockStatus sqs-blockStatus--overlayMode" data-state="uninitialized">
+
+                    <div class="sqs-blockStatus-disclosure">
+
                     </div>
-                    <div class="sqs-block html-block sqs-block-html" data-block-type="2"
-                      id="block-yui_3_17_2_1_1646264259963_51015">
-                      <div class="sqs-block-content">
-                        <p class="" style="white-space:pre-wrap;">Sold by: John Smith</p>
-                        <p class="" style="white-space:pre-wrap;">Phone: (xxx)xxx-xxxx</p>
-                        <p class="" style="white-space:pre-wrap;">Email: johnsmith@mail.com</p>
+
+                    <div class="sqs-blockStatus-box">
+                      <div class="sqs-blockStatus-box-title">Calendar Block</div>
+
+                      <div class="sqs-blockStatus-box-message">
+                        This is an example. Double-click here and select a page to create a calendar of your own
+                        content.
+
+                        <a class="sqs-blockStatus-box-kbArticleLink"
+                          href="https://support.squarespace.com/hc/articles/205814798" target="_blank">Learn
+                          more</a>
+
                       </div>
+
                     </div>
+
                   </div>
-                  <div class="col sqs-col-4 span-4">
-                    <div class="sqs-block html-block sqs-block-html" data-block-type="2"
-                      id="block-622001b34f0f3159ceed9c1d">
-                      <div class="sqs-block-content">
-                        <h2>Open house dates</h2>
-                      </div>
-                    </div>
-                    <div class="sqs-block calendar-block sqs-block-calendar"
-                      data-block-json="&#123;&quot;collectionId&quot;:null,&quot;hSize&quot;:null,&quot;floatDir&quot;:null&#125;"
-                      data-block-type="26" id="block-yui_3_17_2_1_1646264259963_37236">
-                      <div class="sqs-block-content">
-                        <img src="./pictures/calendar.PNG" width="100%">
-
-
-                        <div class="sqs-blockStatus sqs-blockStatus--overlayMode" data-state="uninitialized">
-
-                          <div class="sqs-blockStatus-disclosure">
-
-                          </div>
-
-                          <div class="sqs-blockStatus-box">
-                            <div class="sqs-blockStatus-box-title">Calendar Block</div>
-
-                            <div class="sqs-blockStatus-box-message">
-                              This is an example. Double-click here and select a page to create a calendar of your own
-                              content.
-
-                              <a class="sqs-blockStatus-box-kbArticleLink"
-                                href="https://support.squarespace.com/hc/articles/205814798" target="_blank">Learn
-                                more</a>
-
-                            </div>
-
-                          </div>
-
-                        </div>
 
 
 
 
-                        <!-- The calendar block is initialized by javascript. -->
-                      </div>
-                    </div>
-                  </div>
+                  <!-- The calendar block is initialized by javascript. -->
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-        </section>
+  </section>
 
 
-        <section data-test="page-section" data-section-theme="" class='page-section
+  <section data-test="page-section" data-section-theme="" class='page-section
     
       layout-engine-section
     
@@ -1689,12 +1704,12 @@
       &quot;sectionAnimation&quot;: &quot;none&quot;,
       &quot;backgroundMode&quot;: &quot;image&quot;
     }" data-animation="none" style="min-height: 10vh;">
-          <div class="section-background">
+    <div class="section-background">
 
 
 
-          </div>
-          <div class="content-wrapper" style='
+    </div>
+    <div class="content-wrapper" style='
       
         
           
@@ -1703,36 +1718,36 @@
         
       
     '>
-            <div class="content">
+      <div class="content">
 
 
 
 
 
-              <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
-                id="page-section-62200d62c0dfb468c2fdad31">
-                <div class="row sqs-row">
-                  <div class="col sqs-col-12 span-12">
-                    <div class="sqs-block html-block sqs-block-html" data-block-type="2"
-                      id="block-yui_3_17_2_1_1646267733037_9249">
-                      <div class="sqs-block-content">
-                        <h3 style="white-space:pre-wrap;">Make an Offer</h3>
-                      </div>
-                    </div>
-                    <div class="sqs-block form-block sqs-block-form" data-block-type="9"
-                      id="block-yui_3_17_2_1_1646267733037_7738">
-                      <div class="sqs-block-content">
+        <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
+          id="page-section-62200d62c0dfb468c2fdad31">
+          <div class="row sqs-row">
+            <div class="col sqs-col-12 span-12">
+              <div class="sqs-block html-block sqs-block-html" data-block-type="2"
+                id="block-yui_3_17_2_1_1646267733037_9249">
+                <div class="sqs-block-content">
+                  <h3 style="white-space:pre-wrap;">Make an Offer</h3>
+                </div>
+              </div>
+              <div class="sqs-block form-block sqs-block-form" data-block-type="9"
+                id="block-yui_3_17_2_1_1646267733037_7738">
+                <div class="sqs-block-content">
 
 
 
 
 
-                        <div class="form-wrapper">
+                  <div class="form-wrapper">
 
-                          <div class="form-inner-wrapper">
-                            <form data-form-id="62200d77a48c1a26df580d7b" onsubmit="offered();return false">
+                    <div class="form-inner-wrapper">
+                      <form data-form-id="62200d77a48c1a26df580d7b" onsubmit="offered();return false">
 
-                              <div class="field-list clear">
+                        <div class="field-list clear">
 
 
 
@@ -1751,147 +1766,117 @@
 
 
 
-                                <div id="currency-a34be9bc-1987-431d-83fb-749f824605be"
-                                  class="form-item field currency hassymbol">
+                          <div id="currency-a34be9bc-1987-431d-83fb-749f824605be"
+                            class="form-item field currency hassymbol">
 
-                                  <label class="title" for="currency-a34be9bc-1987-431d-83fb-749f824605be-field">
+                            <label class="title" for="currency-a34be9bc-1987-431d-83fb-749f824605be-field">
 
 
-                                  </label>
+                            </label>
 
 
-                                  <input class="field-element" type="text"
-                                    id="currency-a34be9bc-1987-431d-83fb-749f824605be-field" autocomplete="false"
-                                    spellcheck="false" />
-                                  <div class="prefix">$</div>
-                                </div>
+                            <input class="field-element" type="number"
+                              id="currency-a34be9bc-1987-431d-83fb-749f824605be-field" autocomplete="false"
+                              spellcheck="false" min="1" max="1000000000" />
+                            <div class="prefix">$</div>
+                          </div>
 
+                        </div>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                              </div>
-
-
-
-
-
-
-                              <div data-animation-role="button" class="
+                        <div data-animation-role="button" class="
           form-button-wrapper
           
         ">
-                                <input class="button sqs-system-button sqs-editable-button sqs-button-element--primary"
-                                  type="button" id="offer" value="Submit Offer" onclick="offered()" />
-                              </div>
-
-
-
-
-
-                              <div class="hidden form-submission-text">Thank you!</div>
-                              <div class="hidden form-submission-html" data-submission-html=""></div>
-                            </form>
-                          </div>
+                          <input class="button sqs-system-button sqs-editable-button sqs-button-element--primary"
+                            type="button" id="offer" value="Submit Offer" onclick="offered()" />
                         </div>
-                      </div>
-                    </div>
-                    <div class="sqs-block html-block sqs-block-html" data-block-type="2"
-                      id="block-62200d6272c7870e8f5ec79b">
-                      <div class="sqs-block-content">
-                        <p class="" style="white-space:pre-wrap;">&nbsp;</p>
-                      </div>
+
+
+
+
+
+                        <div class="hidden form-submission-text">Thank you!</div>
+                        <div class="hidden form-submission-html" data-submission-html=""></div>
+                      </form>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-62200d6272c7870e8f5ec79b">
+                <div class="sqs-block-content">
+                  <p class="" style="white-space:pre-wrap;">&nbsp;</p>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-        </section>
-
-
-      </article>
-
-
+  </section>
 
 
-      <section class="item-pagination item-pagination--prev-next" data-collection-type="portfolio-grid-basic"
-        data-controller="ItemPagination">
-
-
-
-        <a href="/buy/house2" class="item-pagination-link item-pagination-link--next">
-          <div class="pagination-title-wrapper">
-
-            <div class="visually-hidden">Next</div>
-            <div class="item-pagination-prev-next">Next</div>
-
-          </div>
-          <div class="item-pagination-icon icon icon--stroke">
-
-          </div>
-        </a>
-
-      </section>
+  </article>
 
 
 
 
+  <section class="item-pagination item-pagination--prev-next" data-collection-type="portfolio-grid-basic"
+    data-controller="ItemPagination">
 
-    </main>
-    <script type="text/javascript">
-      const firstSection = document.querySelector('.page-section');
-      const header = document.querySelector('.header');
-      const mobileOverlayNav = document.querySelector('.header-menu');
-      const sectionBackground = firstSection ? firstSection.querySelector('.section-background') : null;
-      const headerHeight = header ? header.getBoundingClientRect().height : 0;
-      const firstSectionHasBackground = firstSection ? firstSection.className.indexOf('has-background') >= 0 : false;
-      const isFirstSectionInset = firstSection ? firstSection.className.indexOf('background-width--inset') >= 0 : false;
-      const isLayoutEngineSection = firstSection ? firstSection.className.indexOf('layout-engine-section') >= 0 : false;
 
-      if (firstSection) {
-        firstSection.style.paddingTop = headerHeight + 'px';
+
+    <a href="/buy/house2" class="item-pagination-link item-pagination-link--next">
+      <div class="pagination-title-wrapper">
+
+        <div class="visually-hidden">Next</div>
+        <div class="item-pagination-prev-next">Next</div>
+
+      </div>
+      <div class="item-pagination-icon icon icon--stroke">
+
+      </div>
+    </a>
+
+  </section>
+
+
+
+
+
+  </main>
+  <script type="text/javascript">
+    const firstSection = document.querySelector('.page-section');
+    const header = document.querySelector('.header');
+    const mobileOverlayNav = document.querySelector('.header-menu');
+    const sectionBackground = firstSection ? firstSection.querySelector('.section-background') : null;
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const firstSectionHasBackground = firstSection ? firstSection.className.indexOf('has-background') >= 0 : false;
+    const isFirstSectionInset = firstSection ? firstSection.className.indexOf('background-width--inset') >= 0 : false;
+    const isLayoutEngineSection = firstSection ? firstSection.className.indexOf('layout-engine-section') >= 0 : false;
+
+    if (firstSection) {
+      firstSection.style.paddingTop = headerHeight + 'px';
+    }
+    if (sectionBackground && isLayoutEngineSection) {
+      if (isFirstSectionInset) {
+        sectionBackground.style.top = headerHeight + 'px';
+      } else {
+        sectionBackground.style.top = '';
       }
-      if (sectionBackground && isLayoutEngineSection) {
-        if (isFirstSectionInset) {
-          sectionBackground.style.top = headerHeight + 'px';
-        } else {
-          sectionBackground.style.top = '';
-        }
-      }
+    }
         //# sourceURL=headerPositioning.js
-    </script>
+  </script>
 
 
-    <footer class="sections" id="footer-sections" data-footer-sections>
+  <footer class="sections" id="footer-sections" data-footer-sections>
 
-      <section data-test="page-section" data-section-theme="white" class='page-section
+    <section data-test="page-section" data-section-theme="white" class='page-section
     
       layout-engine-section
     
@@ -1921,34 +1906,34 @@
       &quot;sectionAnimation&quot;: &quot;none&quot;,
       &quot;backgroundMode&quot;: &quot;image&quot;
     }" data-animation="none">
-        <div class="section-background">
+      <div class="section-background">
 
 
 
-        </div>
-        <div class="content-wrapper" style='
+      </div>
+      <div class="content-wrapper" style='
       
         
       
     '>
-          <div class="content">
+        <div class="content">
 
 
 
 
 
-            <div class="sqs-layout sqs-grid-12 columns-12 empty" data-type="page-section"
-              data-updated-on="1647376232878" id="page-section-621e97fe2ac3b9297c55bc3f"></div>
-          </div>
+          <div class="sqs-layout sqs-grid-12 columns-12 empty" data-type="page-section" data-updated-on="1647376232878"
+            id="page-section-621e97fe2ac3b9297c55bc3f"></div>
         </div>
-
-      </section>
-
-      <hr>
-      <div style="text-align:center">
-        <small>Realistate © All Rights Reserved.</small>
       </div>
-    </footer>
+
+    </section>
+
+    <hr>
+    <div style="text-align:center">
+      <small>Realistate © All Rights Reserved.</small>
+    </div>
+  </footer>
 
   </div>
 
