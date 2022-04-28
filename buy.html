@@ -887,7 +887,7 @@
                             <div class="sqs-search-ui-text-input sqs-search-ui-button-wrapper color-dark"
                               data-source="block" data-preview="true" data-collection="">
                               <div class="spinner-wrapper"></div>
-                              <input type="search" class="search-input" value="" placeholder="Search"
+                              <input type="search" class="search-input" value="" placeholder="Search for a"
                                 aria-label="Search" />
                             </div>
                           </div>
@@ -897,7 +897,7 @@
                     <div class="sqs-block html-block sqs-block-html" data-block-type="2"
                       id="block-yui_3_17_2_1_1646263900139_8781">
                       <div class="sqs-block-content">
-                        
+
                         <style>
                           ul {
                             list-style-type: none;
@@ -906,36 +906,38 @@
                             overflow: hidden;
                             background-color: white;
                           }
-                          
+
                           li {
                             float: left;
                           }
-                          
-                          li a, .dropbtn {
+
+                          li a,
+                          .dropbtn {
                             display: inline-block;
                             color: #f9f9f9;
                             text-align: center;
                             padding: 14px 16px;
                             text-decoration: none;
                           }
-                          
-                          li a:hover, .dropdown:hover .dropbtn {
+
+                          li a:hover,
+                          .dropdown:hover .dropbtn {
                             background-color: #999;
                           }
-                          
+
                           li.dropdown {
                             display: inline-block;
                           }
-                          
+
                           .dropdown-content {
                             display: none;
                             position: absolute;
                             background-color: #f9f9f9;
                             min-width: 160px;
-                            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                             z-index: 1;
                           }
-                          
+
                           .dropdown-content a {
                             color: black;
                             padding: 12px 16px;
@@ -943,150 +945,156 @@
                             display: block;
                             text-align: left;
                           }
-                          
-                          .dropdown-content a:hover {background-color: #f1f1f1;}
-                          
+
+                          .dropdown-content a:hover {
+                            background-color: #f1f1f1;
+                          }
+
                           .dropdown:hover .dropdown-content {
                             display: block;
                           }
-                  
+
                           .span {
-                                background-color: white;
-                                padding: 10px;
-                                border-style: solid; 
-                            }
-                  
-                  
-                  
-
-section.range-slider {
-  position: relative;
-  width: 300px;
-  height: 120px;
-  float: left;
-  text-align: center;
-  border-style: solid;
-}
-section.range-slider input[type=range] {
-  pointer-events: none;
-  position: absolute;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  border: none;
-  border-radius: 14px;
-  background: #f1efef;
-  box-shadow: inset 0 1px 0 0 #cdc6c6, inset 0 -1px 0 0 #d9d4d4;
-  -webkit-box-shadow: inset 0 1px 0 0 #cdc6c6, inset 0 -1px 0 0 #d9d4d4;
-  overflow: hidden;
-  left: 0;
-  top: 50px;
-  width: 300px;
-  outline: none;
-  height: 20px;
-  margin: 0;
-  padding: 0;
-}
-section.range-slider input[type=range]::-webkit-slider-thumb {
-  pointer-events: all;
-  position: relative;
-  z-index: 1;
-  outline: 0;
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: none;
-  border-radius: 14px;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dad8da), color-stop(100%, #413f41));
-  /* android <= 2.2 */
-  background-image: -webkit-linear-gradient(top, #dad8da 0, #413f41 100%);
-  /* older mobile safari and android > 2.2 */
-  background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
-  /* W3C */
-}
-section.range-slider input[type=range]::-moz-range-thumb {
-  pointer-events: all;
-  position: relative;
-  z-index: 10;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: none;
-  border-radius: 14px;
-  background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
-  /* W3C */
-}
-section.range-slider input[type=range]::-ms-thumb {
-  pointer-events: all;
-  position: relative;
-  z-index: 10;
-  -ms-appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 14px;
-  border: 0;
-  background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
-  /* W3C */
-}
-section.range-slider input[type=range]::-moz-range-track {
-  position: relative;
-  z-index: -1;
-  background-color: black;
-  border: 0;
-}
-section.range-slider input[type=range]:last-of-type::-moz-range-track {
-  -moz-appearance: none;
-  background: none transparent;
-  border: 0;
-}
-section.range-slider input[type=range]::-moz-focus-outer {
-  border: 0;
-}
-                  
+                            background-color: white;
+                            padding: 10px;
+                            border-style: solid;
+                          }
 
 
-                          </style>
-                          
-                          <ul>
-                            <li class="dropdown">
-                              <a href="javascript:void(0)" class="dropbtn"><span class="span">Bathrooms</span>  </a>
-                              <div class="dropdown-content">
-                                <a href="javascript:void(0)">1</a>
-                                <a href="javascript:void(0)">2</a>
-                                <a href="javascript:void(0)">3</a>
-                                <a href="javascript:void(0)">4+</a>
-                              </div>
-                            </li>
-                            <li class="dropdown">
-                              <a href="javascript:void(0)" class="dropbtn"><span class="span">Bedrooms</span></a>
-                              <div class="dropdown-content">
-                                <a href="javascript:void(0)">1</a>
-                                <a href="javascript:void(0)">2</a>
-                                <a href="javascript:void(0)">3</a>
-                                <a href="javascript:void(0)">4+</a>
-                              </div>
-                            </li>
-                            
-                            <li class="dropdown">
-                              <a href="javascript:void(0)" class="dropbtn"><span class="span">House Type</span></a>
-                              <div class="dropdown-content">
-                                <a href="javascript:void(0)">Condo</a>
-                                <a href="javascript:void(0)">Single family</a>
-                                <a href="javascript:void(0)">Large Acreage</a>
-                                <a href="javascript:void(0)">Cottage</a>
-                              </div>
-                            </li>
-                  
-<div>
-<section class="range-slider">
-  <p>Price Range</p><br>
-  <span class="rangeValues"></span>
-  <input value="500" min="500" max="50000" step="500" type="range">
-  <input value="50000" min="500" max="50000" step="500" type="range">
-</section>
-</div>
-<!-- double slider taken from: https://codepen.io/rendykstan/pen/VLqZGO -->
-                  
-                          </ul>
+
+
+                          section.range-slider {
+                            position: relative;
+                            width: 300px;
+                            height: 120px;
+                            float: left;
+                            text-align: center;
+                            border-style: solid;
+                          }
+
+                          section.range-slider input[type=range] {
+                            pointer-events: none;
+                            position: absolute;
+                            -webkit-appearance: none;
+                            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+                            border: none;
+                            border-radius: 14px;
+                            background: #f1efef;
+                            box-shadow: inset 0 1px 0 0 #cdc6c6, inset 0 -1px 0 0 #d9d4d4;
+                            -webkit-box-shadow: inset 0 1px 0 0 #cdc6c6, inset 0 -1px 0 0 #d9d4d4;
+                            overflow: hidden;
+                            left: 0;
+                            top: 50px;
+                            width: 300px;
+                            outline: none;
+                            height: 20px;
+                            margin: 0;
+                            padding: 0;
+                          }
+
+                          section.range-slider input[type=range]::-webkit-slider-thumb {
+                            pointer-events: all;
+                            position: relative;
+                            z-index: 1;
+                            outline: 0;
+                            -webkit-appearance: none;
+                            width: 20px;
+                            height: 20px;
+                            border: none;
+                            border-radius: 14px;
+                            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dad8da), color-stop(100%, #413f41));
+                            /* android <= 2.2 */
+                            background-image: -webkit-linear-gradient(top, #dad8da 0, #413f41 100%);
+                            /* older mobile safari and android > 2.2 */
+                            background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+                            /* W3C */
+                          }
+
+                          section.range-slider input[type=range]::-moz-range-thumb {
+                            pointer-events: all;
+                            position: relative;
+                            z-index: 10;
+                            -moz-appearance: none;
+                            width: 20px;
+                            height: 20px;
+                            border: none;
+                            border-radius: 14px;
+                            background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+                            /* W3C */
+                          }
+
+                          section.range-slider input[type=range]::-ms-thumb {
+                            pointer-events: all;
+                            position: relative;
+                            z-index: 10;
+                            -ms-appearance: none;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 14px;
+                            border: 0;
+                            background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+                            /* W3C */
+                          }
+
+                          section.range-slider input[type=range]::-moz-range-track {
+                            position: relative;
+                            z-index: -1;
+                            background-color: black;
+                            border: 0;
+                          }
+
+                          section.range-slider input[type=range]:last-of-type::-moz-range-track {
+                            -moz-appearance: none;
+                            background: none transparent;
+                            border: 0;
+                          }
+
+                          section.range-slider input[type=range]::-moz-focus-outer {
+                            border: 0;
+                          }
+                        </style>
+
+                        <ul>
+                          <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn"><span class="span">Bathrooms</span> </a>
+                            <div class="dropdown-content">
+                              <a href="javascript:void(0)">1</a>
+                              <a href="javascript:void(0)">2</a>
+                              <a href="javascript:void(0)">3</a>
+                              <a href="javascript:void(0)">4+</a>
+                            </div>
+                          </li>
+                          <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn"><span class="span">Bedrooms</span></a>
+                            <div class="dropdown-content">
+                              <a href="javascript:void(0)">1</a>
+                              <a href="javascript:void(0)">2</a>
+                              <a href="javascript:void(0)">3</a>
+                              <a href="javascript:void(0)">4+</a>
+                            </div>
+                          </li>
+
+                          <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn"><span class="span">House Type</span></a>
+                            <div class="dropdown-content">
+                              <a href="javascript:void(0)">Condo</a>
+                              <a href="javascript:void(0)">Single family</a>
+                              <a href="javascript:void(0)">Large Acreage</a>
+                              <a href="javascript:void(0)">Cottage</a>
+                            </div>
+                          </li>
+
+                          <div>
+                            <section class="range-slider">
+                              <p>Price Range</p><br>
+                              <span class="rangeValues"></span>
+                              <input value="500" min="500" max="50000" step="500" type="range">
+                              <input value="50000" min="500" max="50000" step="500" type="range">
+                            </section>
+                          </div>
+                          <!-- double slider taken from: https://codepen.io/rendykstan/pen/VLqZGO -->
+
+                        </ul>
 
                       </div>
                     </div>
@@ -1098,45 +1106,45 @@ section.range-slider input[type=range]::-moz-focus-outer {
 
         </section>
 
-<script>
-function getVals(){
-  // Get slider values
-  var parent = this.parentNode;
-  var slides = parent.getElementsByTagName("input");
-    var slide1 = parseFloat( slides[0].value );
-    var slide2 = parseFloat( slides[1].value );
-  // Neither slider will clip the other, so make sure we determine which is larger
-  if( slide1 > slide2 ){ var tmp = slide2; slide2 = slide1; slide1 = tmp; }
-  
-  var displayElement = parent.getElementsByClassName("rangeValues")[0];
-      displayElement.innerHTML = "$ " + slide1 + "k - $" + slide2 + "k";
-}
+        <script>
+          function getVals() {
+            // Get slider values
+            var parent = this.parentNode;
+            var slides = parent.getElementsByTagName("input");
+            var slide1 = parseFloat(slides[0].value);
+            var slide2 = parseFloat(slides[1].value);
+            // Neither slider will clip the other, so make sure we determine which is larger
+            if (slide1 > slide2) { var tmp = slide2; slide2 = slide1; slide1 = tmp; }
 
-window.onload = function(){
-  // Initialize Sliders
-  var sliderSections = document.getElementsByClassName("range-slider");
-      for( var x = 0; x < sliderSections.length; x++ ){
-        var sliders = sliderSections[x].getElementsByTagName("input");
-        for( var y = 0; y < sliders.length; y++ ){
-          if( sliders[y].type ==="range" ){
-            sliders[y].oninput = getVals;
-            // Manually trigger event first time to display values
-            sliders[y].oninput();
+            var displayElement = parent.getElementsByClassName("rangeValues")[0];
+            displayElement.innerHTML = "$ " + slide1 + "k - $" + slide2 + "k";
           }
-        }
-      }
-}
-</script>
+
+          window.onload = function () {
+            // Initialize Sliders
+            var sliderSections = document.getElementsByClassName("range-slider");
+            for (var x = 0; x < sliderSections.length; x++) {
+              var sliders = sliderSections[x].getElementsByTagName("input");
+              for (var y = 0; y < sliders.length; y++) {
+                if (sliders[y].type === "range") {
+                  sliders[y].oninput = getVals;
+                  // Manually trigger event first time to display values
+                  sliders[y].oninput();
+                }
+              }
+            }
+          }
+        </script>
 
         <script>
           var slider = document.getElementById("myRange");
           var output = document.getElementById("demo");
           output.innerHTML = slider.value;
-          
-          slider.oninput = function() {
+
+          slider.oninput = function () {
             output.innerHTML = this.value;
           }
-          </script>
+        </script>
 
 
         <section data-test="page-section" data-section-theme="" class='page-section
@@ -1283,15 +1291,15 @@ window.onload = function(){
 
                         <ul>
                           <li class="dropdown">
-                              <a href="javascript:void(0)" class="dropbtn"><span class="span">Sort Listings</span></a>
-                              <div class="dropdown-content">
-                                <a href="javascript:void(0)">Newest Listing First</a>
-                                <a href="javascript:void(0)">Oldest Listing First</a>
-                                <a href="javascript:void(0)">Most Expensive Listing First</a>
-                                <a href="javascript:void(0)">Least Expensive Listing First</a>
-                              </div>
-                            </li>
-                      </ul>
+                            <a href="javascript:void(0)" class="dropbtn"><span class="span">Sort Listings</span></a>
+                            <div class="dropdown-content">
+                              <a href="javascript:void(0)">Newest Listing First</a>
+                              <a href="javascript:void(0)">Oldest Listing First</a>
+                              <a href="javascript:void(0)">Most Expensive Listing First</a>
+                              <a href="javascript:void(0)">Least Expensive Listing First</a>
+                            </div>
+                          </li>
+                        </ul>
 
                       </div>
                     </div>
@@ -1304,7 +1312,7 @@ window.onload = function(){
         </section>
 
 
-        <section data-test="page-section" data-section-theme="" class='page-section
+        <section data-test="page-section" data-section-theme="" class="page-section
     
       content-collection
       full-bleed-section
@@ -1323,7 +1331,7 @@ window.onload = function(){
       
     
     
-    ' data-section-id="621e98291b7d863bc40b0076" data-controller="SectionWrapperController" data-current-styles="{
+    " data-section-id="621e98291b7d863bc40b0076" data-controller="SectionWrapperController" data-current-styles="{
     &quot;imageOverlayOpacity&quot;: 0.15,
     &quot;backgroundWidth&quot;: &quot;background-width--full-bleed&quot;,
     &quot;sectionHeight&quot;: &quot;section-height--medium&quot;,
@@ -1341,10 +1349,10 @@ window.onload = function(){
 
 
           </div>
-          <div class="content-wrapper" style='
+          <div class="content-wrapper" style="
       
       
-    '>
+    ">
             <div class="content">
 
 
@@ -1358,17 +1366,17 @@ window.onload = function(){
                   <div class="grid-image">
                     <div class="grid-image-inner-wrapper">
 
-                      <img src="./pictures/house1.jpeg" alt=" $999,999                123 Address Road, City, Province"
-                        width="100%" />
+                      <img src="./pictures/house1.jpeg" alt="$xxx,xxx                123 Address Road, City, Province"
+                        width="100%">
 
                     </div>
                   </div>
                   <div class="portfolio-text">
-                    <h3 class="portfolio-title"> $999,999</h3>
+                    <h3 class="portfolio-title">$xxx,xxx</h3>
                     <h3 class="portfolio-title">123 Address Road, City, Province</h3>
                     <img src="./pictures/bed-solid.svg" width="8%"> 3
                     <img src="./pictures/toilet-solid.svg" width="5%">2
-                    <a><img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right"></a>
+                    <img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right">
                   </div>
                 </a>
 
@@ -1376,17 +1384,17 @@ window.onload = function(){
                   <div class="grid-image">
                     <div class="grid-image-inner-wrapper">
 
-                      <img src="./pictures/house2.jpeg" alt=" $999,999                123 Address Road, City, Province"
-                        width="100%" />
+                      <img src="./pictures/house2.jpeg" alt="$xxx,xxx                123 Address Road, City, Province"
+                        width="100%">
 
                     </div>
                   </div>
                   <div class="portfolio-text">
-                    <h3 class="portfolio-title"> $999,999 </h3>
+                    <h3 class="portfolio-title">$xxx,xxx </h3>
                     <h3 class="portfolio-title">1111 House Drive, City, Province</h3>
                     <img src="./pictures/bed-solid.svg" width="8%"> 5
                     <img src="./pictures/toilet-solid.svg" width="5%">3
-                    <a><img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right"></a>
+                    <img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right">
                   </div>
                 </a>
 
@@ -1394,16 +1402,16 @@ window.onload = function(){
                   <div class="grid-image">
                     <div class="grid-image-inner-wrapper">
 
-                      <img src="./pictures/house1.jpeg" alt=" $999,999                123 Address Road, City, Province"
-                        width="100%" />
+                      <img src="./pictures/house1.jpeg" alt="$xxx,xxx                123 Address Road, City, Province"
+                        width="100%">
                     </div>
                   </div>
                   <div class="portfolio-text">
-                    <h3 class="portfolio-title"> $999,999</h3>
+                    <h3 class="portfolio-title">$xxx,xxx</h3>
                     <h3 class="portfolio-title">123 Address Road, City, Province</h3>
                     <img src="./pictures/bed-solid.svg" width="8%"> 3
                     <img src="./pictures/toilet-solid.svg" width="5%">2
-                    <a><img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right"></a>
+                    <img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right">
                   </div>
                 </a>
 
@@ -1411,17 +1419,17 @@ window.onload = function(){
                   <div class="grid-image">
                     <div class="grid-image-inner-wrapper">
 
-                      <img src="./pictures/house2.jpeg" alt=" $999,999                123 Address Road, City, Province"
-                        width="100%" />
+                      <img src="./pictures/house2.jpeg" alt="$xxx,xxx                123 Address Road, City, Province"
+                        width="100%">
 
                     </div>
                   </div>
                   <div class="portfolio-text">
-                    <h3 class="portfolio-title"> $999,999 </h3>
+                    <h3 class="portfolio-title">$xxx,xxx </h3>
                     <h3 class="portfolio-title">1111 House Drive, City, Province</h3>
                     <img src="./pictures/bed-solid.svg" width="8%"> 5
                     <img src="./pictures/toilet-solid.svg" width="5%">3
-                    <a><img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right"></a>
+                    <img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right">
                   </div>
                 </a>
 
@@ -1434,47 +1442,47 @@ window.onload = function(){
 
 
         </section>
-        <section data-test="page-section" data-section-theme="" class='page-section
+        <section data-test="page-section" data-section-theme="" class="page-section
     
-      content-collection
-      full-bleed-section
-      collection-type-portfolio-grid-basic
-    
-    background-width--full-bleed
-    
-      section-height--medium
-    
-    
-      content-width--wide
-    
-    horizontal-alignment--center
-    vertical-alignment--middle
-    
-      
-    
-    
-    ' data-section-id="621e98291b7d863bc40b0076" data-controller="SectionWrapperController" data-current-styles="{
-    &quot;imageOverlayOpacity&quot;: 0.15,
-    &quot;backgroundWidth&quot;: &quot;background-width--full-bleed&quot;,
-    &quot;sectionHeight&quot;: &quot;section-height--medium&quot;,
-    &quot;customSectionHeight&quot;: 10,
-    &quot;horizontalAlignment&quot;: &quot;horizontal-alignment--center&quot;,
-    &quot;verticalAlignment&quot;: &quot;vertical-alignment--middle&quot;,
-    &quot;contentWidth&quot;: &quot;content-width--wide&quot;,
-    &quot;customContentWidth&quot;: 50,
-    &quot;sectionTheme&quot;: &quot;&quot;,
-    &quot;sectionAnimation&quot;: &quot;none&quot;,
-    &quot;backgroundMode&quot;: &quot;image&quot;
-  }" data-animation="none">
+content-collection
+full-bleed-section
+collection-type-portfolio-grid-basic
+
+background-width--full-bleed
+
+section-height--medium
+
+
+content-width--wide
+
+horizontal-alignment--center
+vertical-alignment--middle
+
+
+
+
+" data-section-id="621e98291b7d863bc40b0076" data-controller="SectionWrapperController" data-current-styles="{
+&quot;imageOverlayOpacity&quot;: 0.15,
+&quot;backgroundWidth&quot;: &quot;background-width--full-bleed&quot;,
+&quot;sectionHeight&quot;: &quot;section-height--medium&quot;,
+&quot;customSectionHeight&quot;: 10,
+&quot;horizontalAlignment&quot;: &quot;horizontal-alignment--center&quot;,
+&quot;verticalAlignment&quot;: &quot;vertical-alignment--middle&quot;,
+&quot;contentWidth&quot;: &quot;content-width--wide&quot;,
+&quot;customContentWidth&quot;: 50,
+&quot;sectionTheme&quot;: &quot;&quot;,
+&quot;sectionAnimation&quot;: &quot;none&quot;,
+&quot;backgroundMode&quot;: &quot;image&quot;
+}" data-animation="none">
           <div class="section-background">
 
 
 
           </div>
-          <div class="content-wrapper" style='
-      
-      
-    '>
+          <div class="content-wrapper" style="
+
+
+">
             <div class="content">
 
 
@@ -1488,16 +1496,17 @@ window.onload = function(){
                   <div class="grid-image">
                     <div class="grid-image-inner-wrapper">
 
-                      <img src="./pictures/house1.jpeg" alt=" $999,999                123 Address Road, City, Province"
-                        width="100%" />
+                      <img src="./pictures/house1.jpeg" alt="$xxx,xxx                123 Address Road, City, Province"
+                        width="100%">
+
                     </div>
                   </div>
                   <div class="portfolio-text">
-                    <h3 class="portfolio-title"> $999,999</h3>
+                    <h3 class="portfolio-title">$xxx,xxx</h3>
                     <h3 class="portfolio-title">123 Address Road, City, Province</h3>
                     <img src="./pictures/bed-solid.svg" width="8%"> 3
                     <img src="./pictures/toilet-solid.svg" width="5%">2
-                    <a><img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right"></a>
+                    <img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right">
                   </div>
                 </a>
 
@@ -1505,17 +1514,17 @@ window.onload = function(){
                   <div class="grid-image">
                     <div class="grid-image-inner-wrapper">
 
-                      <img src="./pictures/house2.jpeg" alt=" $999,999                123 Address Road, City, Province"
-                        width="100%" />
+                      <img src="./pictures/house2.jpeg" alt="$xxx,xxx                123 Address Road, City, Province"
+                        width="100%">
 
                     </div>
                   </div>
                   <div class="portfolio-text">
-                    <h3 class="portfolio-title"> $999,999 </h3>
+                    <h3 class="portfolio-title">$xxx,xxx </h3>
                     <h3 class="portfolio-title">1111 House Drive, City, Province</h3>
                     <img src="./pictures/bed-solid.svg" width="8%"> 5
                     <img src="./pictures/toilet-solid.svg" width="5%">3
-                    <a><img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right"></a>
+                    <img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right">
                   </div>
                 </a>
 
@@ -1523,16 +1532,16 @@ window.onload = function(){
                   <div class="grid-image">
                     <div class="grid-image-inner-wrapper">
 
-                      <img src="./pictures/house1.jpeg" alt=" $999,999                123 Address Road, City, Province"
-                        width="100%" />
+                      <img src="./pictures/house1.jpeg" alt="$xxx,xxx                123 Address Road, City, Province"
+                        width="100%">
                     </div>
                   </div>
                   <div class="portfolio-text">
-                    <h3 class="portfolio-title"> $999,999</h3>
+                    <h3 class="portfolio-title">$xxx,xxx</h3>
                     <h3 class="portfolio-title">123 Address Road, City, Province</h3>
                     <img src="./pictures/bed-solid.svg" width="8%"> 3
                     <img src="./pictures/toilet-solid.svg" width="5%">2
-                    <a><img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right"></a>
+                    <img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right">
                   </div>
                 </a>
 
@@ -1540,17 +1549,17 @@ window.onload = function(){
                   <div class="grid-image">
                     <div class="grid-image-inner-wrapper">
 
-                      <img src="./pictures/house2.jpeg" alt=" $999,999                123 Address Road, City, Province"
-                        width="100%" />
+                      <img src="./pictures/house2.jpeg" alt="$xxx,xxx                123 Address Road, City, Province"
+                        width="100%">
 
                     </div>
                   </div>
                   <div class="portfolio-text">
-                    <h3 class="portfolio-title"> $999,999 </h3>
+                    <h3 class="portfolio-title">$xxx,xxx </h3>
                     <h3 class="portfolio-title">1111 House Drive, City, Province</h3>
                     <img src="./pictures/bed-solid.svg" width="8%"> 5
                     <img src="./pictures/toilet-solid.svg" width="5%">3
-                    <a><img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right"></a>
+                    <img src="./pictures/heart-circle-plus-solid.svg" width="8%" align="right">
                   </div>
                 </a>
 
