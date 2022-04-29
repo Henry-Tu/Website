@@ -300,6 +300,34 @@
     }
 
   </script>
+  <script>
+    log = localStorage.loggedin;
+      if (log == "User") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "account.html";
+      } else if (log == "Agent") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "agent-dealings.html";
+      } else{
+        alert("Please login to create a listing");
+        window.location.href = "login.html";
+      }
+    function loadFunction() {
+      log = localStorage.loggedin;
+      if (log == "User") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "account.html";
+      } else if (log == "Agent") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "agent-dealings.html";
+      }
+
+    }
+  </script>
 </head>
 
 <body id="collection-621e9e5ead728967a96474bc" data-controller="SiteLoader, Flags" class="
@@ -313,7 +341,7 @@
           
         
       
-    " tabindex="-1">
+    " tabindex="-1" onload="loadFunction()">
   <div id="siteWrapper" class="clearfix site-wrapper ">
 
     <div class="floating-cart hidden" data-controller="FloatingCart">
@@ -385,6 +413,8 @@
       setTimeout(function () {
         JotForm.paymentExtrasOnTheFly([null, null, { "name": "submitForm", "qid": "2", "text": "Submit Form", "type": "control_button" }, { "name": "clickTo3", "qid": "3", "text": "Create your listing", "type": "control_head" }, null, null, null, null, null, null, null, { "name": "name", "qid": "11", "text": "Name", "type": "control_fullname" }, { "name": "phoneNumber12", "qid": "12", "text": "Phone Number", "type": "control_phone" }, { "name": "email13", "qid": "13", "subLabel": "example@example.com", "text": "E-mail", "type": "control_email" }, { "name": "description", "qid": "14", "text": "Description ", "type": "control_textarea" }, null, null, { "name": "divider", "qid": "17", "type": "control_divider" }, { "description": "", "name": "typeA", "qid": "18", "text": "", "type": "control_radio" }, null, null, { "description": "", "name": "address", "qid": "21", "text": "Address", "type": "control_address" }, null, null, null, { "description": "", "name": "sizesquare", "qid": "25", "subLabel": "", "text": "Size (Square Feet)", "type": "control_textbox" }, null, { "description": "", "name": "price", "qid": "27", "subLabel": "", "text": "Price", "type": "control_textbox" }, null, null, null, { "description": "", "name": "bedrooms31", "qid": "31", "subLabel": "", "text": "Bedrooms", "type": "control_spinner" }, { "description": "", "name": "bathrooms", "qid": "32", "subLabel": "", "text": "Bathrooms", "type": "control_spinner" }, { "name": "contactInformation", "qid": "33", "text": "Contact Information", "type": "control_collapse" }, { "description": "", "name": "uploadProof", "qid": "34", "subLabel": "", "text": "Upload Proof of Ownership", "type": "control_fileupload" }, { "name": "listingInformation", "qid": "35", "text": "Listing Information", "type": "control_collapse" }, null, null, null, null, { "description": "", "name": "name40", "qid": "40", "text": "Amenities", "type": "control_checkbox" }, { "description": "", "name": "buildingType41", "qid": "41", "text": "Building type", "type": "control_radio" }, { "description": "", "name": "additionalFeatures", "qid": "42", "subLabel": "", "text": "Additional Features", "type": "control_textbox" }, { "description": "", "name": "pictures", "qid": "43", "subLabel": "", "text": "Pictures", "type": "control_fileupload" }]);
       }, 20); 
+      
+      loadFunction();
     </script>
     </head>
 
@@ -637,7 +667,7 @@
 
 
 
-                      <div class="header-nav-item header-nav-item--collection header-nav-item--active">
+                      <div class="header-nav-item header-nav-item--collection">
                         <a href="buy.html" data-animation-role="header-element">
 
                           Buy
@@ -649,7 +679,7 @@
 
 
 
-                      <div class="header-nav-item header-nav-item--collection">
+                      <div class="header-nav-item header-nav-item--collection header-nav-item--active">
                         <a href="sell.html" data-animation-role="header-element">
 
                           Sell
@@ -701,7 +731,7 @@
 
 
                 <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-                  <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="login.html">
+                  <a  id="topright" class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="login.html">
                     Create Account / Login
                   </a>
                 </div>

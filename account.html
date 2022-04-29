@@ -27465,6 +27465,14 @@
     }
   </style>
   <link rel="stylesheet" href="ourstyle.css">
+
+  <script>
+    function logout(){
+      localStorage.removeItem("loggedin");
+      window.location.href = "home.html";
+    }
+</script>
+
 </head>
 
 <body id="collection-623528209fb5dc19efe50964" data-controller="SiteLoader, Flags" class="
@@ -27478,7 +27486,7 @@
           
         
       
-    " tabindex="-1">
+    " tabindex="-1" onload="loadFunction()">
   <div id="siteWrapper" class="clearfix site-wrapper ">
 
     <div class="floating-cart hidden" data-controller="FloatingCart">
@@ -28682,7 +28690,7 @@
           
             margin-top: 4%;
             margin-bottom: 4%;
-            
+
           width: 50%;
         ">
                         <div class="list-item-media-inner" data-aspect-ratio="4:3" data-animation-role="image">
@@ -28881,7 +28889,7 @@
                         <p> </p>
                       </div>
                       <div class="sqs-block-content">
-                        <a href="home.html"><button>Log out</button></a>
+                        <button onclick="logout()">Log out</button>
                       </div>
                     </div>
                   </div>

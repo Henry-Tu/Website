@@ -106,6 +106,28 @@
     }
   </style>
   <link rel="stylesheet" href="ourstyle.css">
+
+  <script>
+      function logout(){
+        localStorage.removeItem("loggedin");
+        window.location.href = "home.html";
+      }
+  </script>
+  <script>
+    function loadFunction() {
+      log = localStorage.loggedin;
+      if (log == "User") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "account.html";
+      } else if (log == "Agent") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "agent-dealings.html";
+      }
+
+    }
+  </script>
 </head>
 
 <body id="collection-62200e04c87ce67ae5e97525" data-controller="SiteLoader, Flags" class="
@@ -119,7 +141,7 @@
           
         
       
-    " tabindex="-1">
+    " tabindex="-1" onload="loadFunction()">
   <div id="siteWrapper" class="clearfix site-wrapper ">
 
     <div class="floating-cart hidden" data-controller="FloatingCart">
@@ -1208,7 +1230,7 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="sqs-block-content"><a href="home.html"><button>Log out</button></a></div>
+                    <div class="sqs-block-content"><button onclick="logout()">Log out</button></div>
                   </div>
                 </div>
               </div>
