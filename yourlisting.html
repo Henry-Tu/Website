@@ -107,6 +107,21 @@
   </style>
 
   <link rel="stylesheet" href="ourstyle.css">
+  <script>
+    function loadFunction() {
+      log = localStorage.loggedin;
+      if (log == "User") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "account.html";
+      } else if (log == "Agent") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "agent-dealings.html";
+      }
+
+    }
+  </script>
 </head>
 
 <body id="collection-622009e3d07aac323b513a4c" data-controller="SiteLoader, Flags" class="
@@ -120,7 +135,7 @@
           
         
       
-    " tabindex="-1">
+    " tabindex="-1" onload="loadFunction()">
   <div id="siteWrapper" class="clearfix site-wrapper ">
 
     <div class="floating-cart hidden" data-controller="FloatingCart">

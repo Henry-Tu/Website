@@ -109,6 +109,22 @@
     }
   </style>
   <link rel="stylesheet" href="ourstyle.css">
+
+  <script>
+    function loadFunction() {
+      log = localStorage.loggedin;
+      if (log == "User") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "account.html";
+      } else if (log == "Agent") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "agent-dealings.html";
+      }
+
+    }
+  </script>
 </head>
 
 <body id="collection-621ea42c2ba1053e3a08dcc9" data-controller="SiteLoader, Flags" class="
@@ -122,26 +138,26 @@
           
         
       
-    " tabindex="-1">
-  <div id="siteWrapper" class="clearfix site-wrapper ">
+    " tabindex="-1" onload="loadFunction()">
+  <div id=" siteWrapper" class="clearfix site-wrapper ">
 
-    <div class="floating-cart hidden" data-controller="FloatingCart">
-      <a href="/cart" class="icon icon--stroke icon--cart sqs-custom-cart">
-        <span class="Cart-inner">
-          <svg class="icon icon--cart" viewBox="0 0 31 24">
-            <g class="svg-icon cart-icon--odd">
-              <circle stroke-miterlimit="10" cx="22.5" cy="21.5" r="1" />
-              <circle stroke-miterlimit="10" cx="9.5" cy="21.5" r="1" />
-              <path fill="none" stroke-miterlimit="10" d="M0,1.5h5c0.6,0,1.1,0.4,1.1,1l1.7,13
+  <div class="floating-cart hidden" data-controller="FloatingCart">
+    <a href="/cart" class="icon icon--stroke icon--cart sqs-custom-cart">
+      <span class="Cart-inner">
+        <svg class="icon icon--cart" viewBox="0 0 31 24">
+          <g class="svg-icon cart-icon--odd">
+            <circle stroke-miterlimit="10" cx="22.5" cy="21.5" r="1" />
+            <circle stroke-miterlimit="10" cx="9.5" cy="21.5" r="1" />
+            <path fill="none" stroke-miterlimit="10" d="M0,1.5h5c0.6,0,1.1,0.4,1.1,1l1.7,13
       c0.1,0.5,0.6,1,1.1,1h15c0.5,0,1.2-0.4,1.4-0.9l3.3-8.1c0.2-0.5-0.1-0.9-0.6-0.9H12" />
-            </g>
-          </svg>
-          <div class="icon-cart-quantity">
-            <span class="sqs-cart-quantity">0</span>
-          </div>
-        </span>
-      </a>
-    </div>
+          </g>
+        </svg>
+        <div class="icon-cart-quantity">
+          <span class="sqs-cart-quantity">0</span>
+        </div>
+      </span>
+    </a>
+  </div>
 
 
 
@@ -153,7 +169,7 @@
 
 
 
-    <header data-test="header" id="header" class="
+  <header data-test="header" id="header" class="
     
       
         white
@@ -274,24 +290,24 @@
 },
 &quot;showPromotedElement&quot;: false
 }" data-section-id="header" data-header-theme="" data-menu-overlay-theme="" data-header-style="dynamic"
-      data-first-focusable-element tabindex="-1">
+    data-first-focusable-element tabindex="-1">
 
-      <div class="sqs-announcement-bar-dropzone"></div>
+    <div class="sqs-announcement-bar-dropzone"></div>
 
-      <div class="header-announcement-bar-wrapper" style="padding-bottom: 10px; padding-top: 10px;">
+    <div class="header-announcement-bar-wrapper" style="padding-bottom: 10px; padding-top: 10px;">
 
-        <a href="#page" tabindex="1" class="header-skip-link sqs-button-element--primary">
-          Skip to Content
-        </a>
+      <a href="#page" tabindex="1" class="header-skip-link sqs-button-element--primary">
+        Skip to Content
+      </a>
 
 
 
-        <style>
-          @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-            .header-blur-background {}
-          }
-        </style>
-        <div class="header-border" data-header-style="dynamic" data-test="header-border" style="
+      <style>
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+          .header-blur-background {}
+        }
+      </style>
+      <div class="header-border" data-header-style="dynamic" data-test="header-border" style="
 
 
 
@@ -307,13 +323,13 @@
 
 
 "></div>
-        <div class="header-dropshadow" data-header-style="dynamic" data-test="header-dropshadow" style="
+      <div class="header-dropshadow" data-header-style="dynamic" data-test="header-dropshadow" style="
 
 "></div>
 
 
 
-        <div class='header-inner container--fluid
+      <div class='header-inner container--fluid
       
       
       
@@ -349,12 +365,10 @@
 
 
 " data-test="header-inner">
-          <!-- Background -->
-          <div class="header-background theme-bg--primary" style="background-color: white;"></div>
+        <!-- Background -->
+        <div class="header-background theme-bg--primary" style="background-color: white;"></div>
 
-          <div class="header-display-desktop" data-content-field="site-title">
-
-
+        <div class="header-display-desktop" data-content-field="site-title">
 
 
 
@@ -364,288 +378,291 @@
 
 
 
-            <!-- Social -->
+
+
+          <!-- Social -->
 
 
 
-            <!-- Title and nav wrapper -->
-            <div class="header-title-nav-wrapper">
+          <!-- Title and nav wrapper -->
+          <div class="header-title-nav-wrapper">
 
 
 
 
 
 
-              <!-- Title -->
+            <!-- Title -->
 
-              <div class="
+            <div class="
                     header-title
                     
                   " data-animation-role="header-element">
 
-                <div class="header-title-text" >
-                  <a id="site-title" href="home.html" data-animation-role="header-element"><img
-                      src="./pictures/Picture1.png" width="230" height="70"></a>
-                </div>
-
-
-              </div>
-
-
-
-              <!-- Nav -->
-              <div class="header-nav">
-                <div class="header-nav-wrapper">
-                  <nav class="header-nav-list">
-
-
-
-
-                    <div class="header-nav-item header-nav-item--collection ">
-                      <a href="buy.html" data-animation-role="header-element">
-
-                        Buy
-                      </a>
-                    </div>
-
-
-
-
-
-
-                    <div class="header-nav-item header-nav-item--collection">
-                      <a href="sell.html" data-animation-role="header-element">
-
-                        Sell
-                      </a>
-                    </div>
-
-
-                    <div class="header-nav-item header-nav-item--collection">
-                      <a href="about.html" data-animation-role="header-element">
-
-                        About
-                      </a>
-                    </div>
-
-
-                    <div class="header-nav-item header-nav-item--collection">
-                      <a href="contact-agent.html" data-animation-role="header-element">
-
-                        Contact
-                      </a>
-                    </div>
-
-
-
-                  </nav>
-                </div>
+              <div class="header-title-text">
+                <a id="site-title" href="home.html" data-animation-role="header-element"><img
+                    src="./pictures/Picture1.png" width="230" height="70"></a>
               </div>
 
 
             </div>
 
 
-            <!-- Actions -->
-            <div class="header-actions header-actions--right">
+
+            <!-- Nav -->
+            <div class="header-nav">
+              <div class="header-nav-wrapper">
+                <nav class="header-nav-list">
+
+
+
+
+                  <div class="header-nav-item header-nav-item--collection ">
+                    <a href="buy.html" data-animation-role="header-element">
+
+                      Buy
+                    </a>
+                  </div>
 
 
 
 
 
 
+                  <div class="header-nav-item header-nav-item--collection">
+                    <a href="sell.html" data-animation-role="header-element">
+
+                      Sell
+                    </a>
+                  </div>
+
+
+                  <div class="header-nav-item header-nav-item--collection">
+                    <a href="about.html" data-animation-role="header-element">
+
+                      About
+                    </a>
+                  </div>
+
+
+                  <div class="header-nav-item header-nav-item--collection">
+                    <a href="contact-agent.html" data-animation-role="header-element">
+
+                      Contact
+                    </a>
+                  </div>
 
 
 
-              <div class="showOnMobile">
-
+                </nav>
               </div>
+            </div>
 
 
-              <div class="showOnDesktop">
-
-              </div>
+          </div>
 
 
-              <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-                <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="login.html">
-                  Create Account / Login
-                </a>
-              </div>
+          <!-- Actions -->
+          <div class="header-actions header-actions--right">
+
+
+
+
+
+
+
+
+
+            <div class="showOnMobile">
 
             </div>
 
 
-            <!-- Burger -->
-            <div class="header-burger
+            <div class="showOnDesktop">
+
+            </div>
+
+
+            <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
+              <a id="topright" class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary"
+                href="login.html">
+                Create Account / Login
+              </a>
+            </div>
+
+          </div>
+
+
+          <!-- Burger -->
+          <div class="header-burger
           
             menu-overlay-has-visible-non-navigation-items
           
           
             
           " data-animation-role="header-element">
-              <button class="header-burger-btn burger" data-test="header-burger">
-                <span hidden class="js-header-burger-open-title visually-hidden">Open Menu</span>
-                <span hidden class="js-header-burger-close-title visually-hidden">Close Menu</span>
-                <div class="burger-box">
-                  <div class="burger-inner
+            <button class="header-burger-btn burger" data-test="header-burger">
+              <span hidden class="js-header-burger-open-title visually-hidden">Open Menu</span>
+              <span hidden class="js-header-burger-close-title visually-hidden">Close Menu</span>
+              <div class="burger-box">
+                <div class="burger-inner
                    header-menu-icon-doubleLineHamburger
                   
                   
                   
                 ">
-                    <div class="top-bun"></div>
-                    <div class="patty"></div>
-                    <div class="bottom-bun"></div>
-                  </div>
+                  <div class="top-bun"></div>
+                  <div class="patty"></div>
+                  <div class="bottom-bun"></div>
                 </div>
-              </button>
-            </div>
-
-
-
-
-
-
-
+              </div>
+            </button>
           </div>
-          <div class="header-display-mobile" data-content-field="site-title">
-
-
-            <!-- Social -->
-
-
-
-            <!-- Title and nav wrapper -->
-            <div class="header-title-nav-wrapper">
 
 
 
 
 
 
-              <!-- Title -->
 
-              <div class="
+        </div>
+        <div class="header-display-mobile" data-content-field="site-title">
+
+
+          <!-- Social -->
+
+
+
+          <!-- Title and nav wrapper -->
+          <div class="header-title-nav-wrapper">
+
+
+
+
+
+
+            <!-- Title -->
+
+            <div class="
                     header-title
                     
                   " data-animation-role="header-element">
 
-                <div class="header-title-text">
-                  <a id="site-title" href="home.html" data-animation-role="header-element">Real Estate Site</a>
-                </div>
-
-
-              </div>
-
-
-
-              <!-- Nav -->
-              <div class="header-nav">
-                <div class="header-nav-wrapper">
-                  <nav class="header-nav-list">
-
-
-
-
-                    <div class="header-nav-item header-nav-item--collection">
-                      <a href="buy.html" data-animation-role="header-element">
-
-                        Buy
-                      </a>
-                    </div>
-
-
-
-
-
-
-                    <div class="header-nav-item header-nav-item--collection">
-                      <a href="sell.html" data-animation-role="header-element">
-
-                        Sell
-                      </a>
-                    </div>
-
-
-
-
-
-
-                  </nav>
-                </div>
+              <div class="header-title-text">
+                <a id="site-title" href="home.html" data-animation-role="header-element">Real Estate Site</a>
               </div>
 
 
             </div>
 
 
-            <!-- Actions -->
-            <div class="header-actions header-actions--right">
+
+            <!-- Nav -->
+            <div class="header-nav">
+              <div class="header-nav-wrapper">
+                <nav class="header-nav-list">
+
+
+
+
+                  <div class="header-nav-item header-nav-item--collection">
+                    <a href="buy.html" data-animation-role="header-element">
+
+                      Buy
+                    </a>
+                  </div>
 
 
 
 
 
 
+                  <div class="header-nav-item header-nav-item--collection">
+                    <a href="sell.html" data-animation-role="header-element">
+
+                      Sell
+                    </a>
+                  </div>
 
 
 
-              <div class="showOnMobile">
 
+
+
+                </nav>
               </div>
+            </div>
 
 
-              <div class="showOnDesktop">
-
-              </div>
+          </div>
 
 
-              <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-                <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="login.html">
-                  Login
-                </a>
-              </div>
+          <!-- Actions -->
+          <div class="header-actions header-actions--right">
+
+
+
+
+
+
+
+
+
+            <div class="showOnMobile">
 
             </div>
 
 
-            <!-- Burger -->
-            <div class="header-burger
+            <div class="showOnDesktop">
+
+            </div>
+
+
+            <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
+              <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="login.html">
+                Login
+              </a>
+            </div>
+
+          </div>
+
+
+          <!-- Burger -->
+          <div class="header-burger
           
             menu-overlay-has-visible-non-navigation-items
           
           
             
           " data-animation-role="header-element">
-              <button class="header-burger-btn burger" data-test="header-burger">
-                <span hidden class="js-header-burger-open-title visually-hidden">Open Menu</span>
-                <span hidden class="js-header-burger-close-title visually-hidden">Close Menu</span>
-                <div class="burger-box">
-                  <div class="burger-inner
+            <button class="header-burger-btn burger" data-test="header-burger">
+              <span hidden class="js-header-burger-open-title visually-hidden">Open Menu</span>
+              <span hidden class="js-header-burger-close-title visually-hidden">Close Menu</span>
+              <div class="burger-box">
+                <div class="burger-inner
                    header-menu-icon-doubleLineHamburger
                   
                   
                   
                 ">
-                    <div class="top-bun"></div>
-                    <div class="patty"></div>
-                    <div class="bottom-bun"></div>
-                  </div>
+                  <div class="top-bun"></div>
+                  <div class="patty"></div>
+                  <div class="bottom-bun"></div>
                 </div>
-              </button>
-            </div>
-
-
-
-
-
-
+              </div>
+            </button>
           </div>
+
+
+
+
+
+
         </div>
       </div>
-      <!-- (Mobile) Menu Navigation -->
-      <div class="header-menu header-menu--folder-list
+    </div>
+    <!-- (Mobile) Menu Navigation -->
+    <div class="header-menu header-menu--folder-list
     
     
     
@@ -765,60 +782,60 @@
 },
 &quot;showPromotedElement&quot;: false
 }" data-section-id="overlay-nav" data-show-account-login="true" data-test="header-menu">
-        <div class="header-menu-bg theme-bg--primary"></div>
-        <div class="header-menu-nav">
-          <nav class="header-menu-nav-list">
-            <div data-folder="root" class="header-menu-nav-folder">
-              <!-- Menu Navigation -->
-              <div class="header-menu-nav-folder-content">
+      <div class="header-menu-bg theme-bg--primary"></div>
+      <div class="header-menu-nav">
+        <nav class="header-menu-nav-list">
+          <div data-folder="root" class="header-menu-nav-folder">
+            <!-- Menu Navigation -->
+            <div class="header-menu-nav-folder-content">
 
-                <div class="container header-menu-nav-item header-menu-nav-item--collection">
-                  <a href="buy.html">
-
-
-                    Buy
-                  </a>
-                </div>
-
-                <div class="container header-menu-nav-item header-menu-nav-item--collection">
-                  <a href="sell.html">
-
-                    Sell
-                  </a>
-                </div>
-
-                <div class="container header-menu-nav-item header-menu-nav-item--collection">
-                  <a href="about.html">
-
-                    About
-                  </a>
-                </div>
-
-                <div class="container header-menu-nav-item header-menu-nav-item--collection">
-                  <a href="contact-agent.html">
-
-                    Contact
-                  </a>
-                </div>
+              <div class="container header-menu-nav-item header-menu-nav-item--collection">
+                <a href="buy.html">
 
 
-              </div>
-
-              <div class="header-menu-actions"></div>
-
-
-              <div class="header-menu-cta">
-                <a class="theme-btn--primary btn sqs-button-element--primary" href="login.html">
-                  Login
+                  Buy
                 </a>
               </div>
 
+              <div class="container header-menu-nav-item header-menu-nav-item--collection">
+                <a href="sell.html">
+
+                  Sell
+                </a>
+              </div>
+
+              <div class="container header-menu-nav-item header-menu-nav-item--collection">
+                <a href="about.html">
+
+                  About
+                </a>
+              </div>
+
+              <div class="container header-menu-nav-item header-menu-nav-item--collection">
+                <a href="contact-agent.html">
+
+                  Contact
+                </a>
+              </div>
+
+
             </div>
-          </nav>
-        </div>
+
+            <div class="header-menu-actions"></div>
+
+
+            <div class="header-menu-cta">
+              <a class="theme-btn--primary btn sqs-button-element--primary" href="login.html">
+                Login
+              </a>
+            </div>
+
+          </div>
+        </nav>
       </div>
-    </header>
-    <section data-test="page-section" data-section-theme="" class='page-section
+    </div>
+  </header>
+  <section data-test="page-section" data-section-theme="" class='page-section
     
       layout-engine-section
     
@@ -851,12 +868,12 @@
 &quot;sectionAnimation&quot;: &quot;none&quot;,
 &quot;backgroundMode&quot;: &quot;image&quot;
 }" data-animation="none" style="min-height: 10vh;">
-      <div class="section-background">
+    <div class="section-background">
 
 
 
-      </div>
-      <div class="content-wrapper" style='
+    </div>
+    <div class="content-wrapper" style='
       
         
           
@@ -865,32 +882,31 @@
         
       
     '>
-        <div class="content">
+      <div class="content">
 
 
 
 
 
-          <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
-            id="page-section-621ea4bbf397d829d98ea8e8">
-            <div class="row sqs-row">
-              <div class="col sqs-col-12 span-12">
-                <div class="sqs-block html-block sqs-block-html" data-block-type="2"
-                  id="block-621ea4bcec2d0f1f02cc52e4">
-                  <div class="sqs-block-content">
-                    <p style="text-align:center;white-space:pre-wrap;" class="">Featured homes</p>
-                  </div>
+        <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
+          id="page-section-621ea4bbf397d829d98ea8e8">
+          <div class="row sqs-row">
+            <div class="col sqs-col-12 span-12">
+              <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-621ea4bcec2d0f1f02cc52e4">
+                <div class="sqs-block-content">
+                  <p style="text-align:center;white-space:pre-wrap;" class="">Featured homes</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-    </section>
+  </section>
 
 
-    <section data-test="page-section" data-section-theme="" class='page-section
+  <section data-test="page-section" data-section-theme="" class='page-section
     
       gallery-section
       full-bleed-section
@@ -919,396 +935,393 @@
 &quot;backgroundMode&quot;: &quot;image&quot;,
 &quot;backgroundImage&quot;: null
 }" data-animation="none" data-json-schema-section>
-      <div class="section-background">
+    <div class="section-background">
 
 
 
-      </div>
-      <div class="content-wrapper" style='
+    </div>
+    <div class="content-wrapper" style='
       
         
       
     '>
-        <div class="content">
+      <div class="content">
 
 
 
 
-          <div class="gallery gallery-section-wrapper" style="min-height: 100px;">
-            <div class="gallery" style="min-height: 100px;">
-
-
-
-
-
+        <div class="gallery gallery-section-wrapper" style="min-height: 100px;">
+          <div class="gallery" style="min-height: 100px;">
 
 
 
 
 
 
-              <!-- Gallery Reel -->
-              <div class="gallery-reel" data-controller="GalleryReel" data-section-id="621ea42c2ba1053e3a08dccc"
-                data-controls-location="overflow-side" data-width="full" data-props='{
+
+
+
+
+
+            <!-- Gallery Reel -->
+            <div class="gallery-reel" data-controller="GalleryReel" data-section-id="621ea42c2ba1053e3a08dccc"
+              data-controls-location="overflow-side" data-width="full" data-props='{
 "isCropping": false,
 "controlsLocation": "overflow-side",
 "viewportHeight": 50,
 "width": "full"
 }' style="height: 50vh; padding: 0px;" data-show-captions="false" data-test="gallery-slideshow-reel">
-                <div class="gallery-reel-wrapper">
-                  <div class="gallery-reel-list">
+              <div class="gallery-reel-wrapper">
+                <div class="gallery-reel-list">
 
-                    <figure class="gallery-reel-item" data-test="gallery-reel-item"
-                      data-slide-url="9eth1a4p3q36l61qqdipf1pl4f47ua">
+                  <figure class="gallery-reel-item" data-test="gallery-reel-item"
+                    data-slide-url="9eth1a4p3q36l61qqdipf1pl4f47ua">
 
-                      <div class="gallery-reel-item-wrapper">
-                        <div class="gallery-reel-item-src">
-                          <a href="listing1.html">
-                            <img src="./pictures/house1.jpeg" data-image-dimensions="500x333"
-                              data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
-                          </a>
-                        </div>
+                    <div class="gallery-reel-item-wrapper">
+                      <div class="gallery-reel-item-src">
+                        <a href="listing1.html">
+                          <img src="./pictures/house1.jpeg" data-image-dimensions="500x333"
+                            data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
+                        </a>
                       </div>
+                    </div>
 
 
-                    </figure>
+                  </figure>
 
-                    <figure class="gallery-reel-item" data-test="gallery-reel-item"
-                      data-slide-url="zs8ulb3yh10mmr51kzchlaqr82v64g">
+                  <figure class="gallery-reel-item" data-test="gallery-reel-item"
+                    data-slide-url="zs8ulb3yh10mmr51kzchlaqr82v64g">
 
-                      <div class="gallery-reel-item-wrapper">
-                        <div class="gallery-reel-item-src">
-                          <a href="listing1.html">
-                            <img src="./pictures/house2.jpeg" data-image-dimensions="500x333"
-                              data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
-                          </a>
-                        </div>
+                    <div class="gallery-reel-item-wrapper">
+                      <div class="gallery-reel-item-src">
+                        <a href="listing1.html">
+                          <img src="./pictures/house2.jpeg" data-image-dimensions="500x333"
+                            data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
+                        </a>
                       </div>
+                    </div>
 
 
-                    </figure>
+                  </figure>
 
-                    <figure class="gallery-reel-item" data-test="gallery-reel-item"
-                      data-slide-url="deqossdjfoa9qut4pn7war7u34b55i">
+                  <figure class="gallery-reel-item" data-test="gallery-reel-item"
+                    data-slide-url="deqossdjfoa9qut4pn7war7u34b55i">
 
-                      <div class="gallery-reel-item-wrapper">
-                        <div class="gallery-reel-item-src">
-                          <a href="listing1.html">
-                            <img src="./pictures/house3.jpg" data-image-dimensions="500x333"
-                              data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
-                          </a>
-                        </div>
+                    <div class="gallery-reel-item-wrapper">
+                      <div class="gallery-reel-item-src">
+                        <a href="listing1.html">
+                          <img src="./pictures/house3.jpg" data-image-dimensions="500x333"
+                            data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
+                        </a>
                       </div>
+                    </div>
 
 
-                    </figure>
+                  </figure>
 
-                    <figure class="gallery-reel-item" data-test="gallery-reel-item"
-                      data-slide-url="pjb6mfpk9rq99jwr5rvddo3hxyz2cv-f3elp-rmdyf">
+                  <figure class="gallery-reel-item" data-test="gallery-reel-item"
+                    data-slide-url="pjb6mfpk9rq99jwr5rvddo3hxyz2cv-f3elp-rmdyf">
 
-                      <div class="gallery-reel-item-wrapper">
-                        <div class="gallery-reel-item-src">
-                          <a href="listing1.html">
-                            <img src="./pictures/house4.jpg" data-image-dimensions="500x333"
-                              data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
-                          </a>
-                        </div>
+                    <div class="gallery-reel-item-wrapper">
+                      <div class="gallery-reel-item-src">
+                        <a href="listing1.html">
+                          <img src="./pictures/house4.jpg" data-image-dimensions="500x333"
+                            data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
+                        </a>
                       </div>
+                    </div>
 
 
-                    </figure>
+                  </figure>
 
-                    <figure class="gallery-reel-item" data-test="gallery-reel-item"
-                      data-slide-url="ozg8val2si892dwucyqp9h02y2gp2s-k772h-2f5ym">
+                  <figure class="gallery-reel-item" data-test="gallery-reel-item"
+                    data-slide-url="ozg8val2si892dwucyqp9h02y2gp2s-k772h-2f5ym">
 
-                      <div class="gallery-reel-item-wrapper">
-                        <div class="gallery-reel-item-src">
-                          <a href="listing1.html">
-                            <img src="./pictures/house5.jpg" data-image-dimensions="500x333"
-                              data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
-                          </a>
-                        </div>
+                    <div class="gallery-reel-item-wrapper">
+                      <div class="gallery-reel-item-src">
+                        <a href="listing1.html">
+                          <img src="./pictures/house5.jpg" data-image-dimensions="500x333"
+                            data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
+                        </a>
                       </div>
+                    </div>
 
 
-                    </figure>
+                  </figure>
 
-                    <figure class="gallery-reel-item" data-test="gallery-reel-item"
-                      data-slide-url="um0uwrm1vqr4tbv92xddp0ewbk7fny-g7ftz-glrmh">
+                  <figure class="gallery-reel-item" data-test="gallery-reel-item"
+                    data-slide-url="um0uwrm1vqr4tbv92xddp0ewbk7fny-g7ftz-glrmh">
 
-                      <div class="gallery-reel-item-wrapper">
-                        <div class="gallery-reel-item-src">
-                          <a href="listing1.html">
-                            <img src="./pictures/house6.jpeg" data-image-dimensions="500x333"
-                              data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
-                          </a>
-                        </div>
+                    <div class="gallery-reel-item-wrapper">
+                      <div class="gallery-reel-item-src">
+                        <a href="listing1.html">
+                          <img src="./pictures/house6.jpeg" data-image-dimensions="500x333"
+                            data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
+                        </a>
                       </div>
+                    </div>
 
 
-                    </figure>
+                  </figure>
 
-                    <figure class="gallery-reel-item" data-test="gallery-reel-item"
-                      data-slide-url="oplw14tda9ls4bvtsyvpbribjbhm46-5gtmj-5xtcj">
+                  <figure class="gallery-reel-item" data-test="gallery-reel-item"
+                    data-slide-url="oplw14tda9ls4bvtsyvpbribjbhm46-5gtmj-5xtcj">
 
-                      <div class="gallery-reel-item-wrapper">
-                        <div class="gallery-reel-item-src">
-                          <a href="listing1.html">
-                            <img src="./pictures/house7.jpg" data-image-dimensions="500x333"
-                              data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
-                          </a>
-                        </div>
+                    <div class="gallery-reel-item-wrapper">
+                      <div class="gallery-reel-item-src">
+                        <a href="listing1.html">
+                          <img src="./pictures/house7.jpg" data-image-dimensions="500x333"
+                            data-image-focal-point="0.5,0.5" alt="pexels-photo-106399.jpeg" data-load="true" />
+                        </a>
                       </div>
+                    </div>
 
 
-                    </figure>
+                  </figure>
 
+                </div>
+                <div class="gallery-reel-controls">
+                  <div class="gallery-reel-control">
+                    <button class="gallery-reel-control-btn" data-test="gallery-reel-control-btn-previous" data-previous
+                      aria-label="Previous Slide">
+                      <div class="gallery-reel-control-btn-icon">
+                        <svg viewBox="0 0 60 30">
+                          <path class="st0" d="M15.9,23.7L7.1,15l8.7-8.7" fill="none" />
+                          <path class="st1" d="M52.9,15H8.5" fill="none" />
+                        </svg>
+                      </div>
+                    </button>
                   </div>
-                  <div class="gallery-reel-controls">
-                    <div class="gallery-reel-control">
-                      <button class="gallery-reel-control-btn" data-test="gallery-reel-control-btn-previous"
-                        data-previous aria-label="Previous Slide">
-                        <div class="gallery-reel-control-btn-icon">
-                          <svg viewBox="0 0 60 30">
-                            <path class="st0" d="M15.9,23.7L7.1,15l8.7-8.7" fill="none" />
-                            <path class="st1" d="M52.9,15H8.5" fill="none" />
-                          </svg>
-                        </div>
-                      </button>
-                    </div>
-                    <div class="gallery-reel-control">
-                      <button class="gallery-reel-control-btn" data-test="gallery-reel-control-btn-next" data-next
-                        aria-label="Next Slide">
-                        <div class="gallery-reel-control-btn-icon">
-                          <svg viewBox="0 0 60 30">
-                            <path d="M44.1,6.3l8.7,8.7l-8.7,8.7" fill="none" />
-                            <path d="M7.1,15h44.4" fill="none" />
-                          </svg>
-                        </div>
-                      </button>
-                    </div>
+                  <div class="gallery-reel-control">
+                    <button class="gallery-reel-control-btn" data-test="gallery-reel-control-btn-next" data-next
+                      aria-label="Next Slide">
+                      <div class="gallery-reel-control-btn-icon">
+                        <svg viewBox="0 0 60 30">
+                          <path d="M44.1,6.3l8.7,8.7l-8.7,8.7" fill="none" />
+                          <path d="M7.1,15h44.4" fill="none" />
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
-                <div class="gallery-lightbox-outer-wrapper" data-lightbox="false" data-controller="Lightbox">
-                  <div role="dialog" aria-label="Gallery" class="
+              </div>
+              <div class="gallery-lightbox-outer-wrapper" data-lightbox="false" data-controller="Lightbox">
+                <div role="dialog" aria-label="Gallery" class="
     gallery-lightbox
     
     
   ">
-                    <div class="gallery-lightbox-background"></div>
+                  <div class="gallery-lightbox-background"></div>
 
-                    <div class="gallery-lightbox-header">
-                      <button class="gallery-lightbox-close-btn" aria-label="Close" data-close
-                        data-test="gallery-lightbox-close">
-                        <div class="gallery-lightbox-close-btn-icon">
-                          <svg viewBox="0 0 40 40">
-                            <path d="M4.3,35.7L35.7,4.3" />
-                            <path d="M4.3,4.3l31.4,31.4" />
-                          </svg>
-                        </div>
-                      </button>
-                    </div>
-
-
-                    <div class="gallery-lightbox-wrapper">
-                      <div class="gallery-lightbox-list">
-
-                        <figure class="gallery-lightbox-item" data-slide-url="9eth1a4p3q36l61qqdipf1pl4f47ua"
-                          data-test="gallery-lightbox-item">
-                          <div class="gallery-lightbox-item-wrapper">
-                            <div class="gallery-lightbox-item-src">
-                              <div class="
-                  gallery-lightbox-item-img
-                  content-fit
-                ">
-
-                                <img
-                                  data-src="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/71270471-6b60-4ff7-8547-5a8cda02c9a8/pexels-photo-106399.jpeg"
-                                  data-image="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/71270471-6b60-4ff7-8547-5a8cda02c9a8/pexels-photo-106399.jpeg"
-                                  data-image-dimensions="500x333" data-image-focal-point="0.5,0.5"
-                                  alt="pexels-photo-106399.jpeg" data-load="false" />
-
-
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-
-                        <figure class="gallery-lightbox-item" data-slide-url="zs8ulb3yh10mmr51kzchlaqr82v64g"
-                          data-test="gallery-lightbox-item">
-                          <div class="gallery-lightbox-item-wrapper">
-                            <div class="gallery-lightbox-item-src">
-                              <div class="
-                  gallery-lightbox-item-img
-                  content-fit
-                ">
-
-                                <img
-                                  data-src="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/ef8220f6-92cd-4234-987b-d7901323c8c7/pexels-photo-1396122.jpeg"
-                                  data-image="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/ef8220f6-92cd-4234-987b-d7901323c8c7/pexels-photo-1396122.jpeg"
-                                  data-image-dimensions="500x333" data-image-focal-point="0.5,0.5"
-                                  alt="pexels-photo-1396122.jpeg" data-load="false" />
-
-
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-
-                        <figure class="gallery-lightbox-item" data-slide-url="deqossdjfoa9qut4pn7war7u34b55i"
-                          data-test="gallery-lightbox-item">
-                          <div class="gallery-lightbox-item-wrapper">
-                            <div class="gallery-lightbox-item-src">
-                              <div class="
-                  gallery-lightbox-item-img
-                  content-fit
-                ">
-
-                                <img
-                                  data-src="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/ef2ded71-e755-4de1-9553-0c00506e3ce4/14313397.jpg"
-                                  data-image="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/ef2ded71-e755-4de1-9553-0c00506e3ce4/14313397.jpg"
-                                  data-image-dimensions="226x340" data-image-focal-point="0.5,0.5" alt="14313397.jpg"
-                                  data-load="false" />
-
-
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-
-                        <figure class="gallery-lightbox-item"
-                          data-slide-url="pjb6mfpk9rq99jwr5rvddo3hxyz2cv-f3elp-rmdyf" data-test="gallery-lightbox-item">
-                          <div class="gallery-lightbox-item-wrapper">
-                            <div class="gallery-lightbox-item-src">
-                              <div class="
-                  gallery-lightbox-item-img
-                  content-fit
-                ">
-
-                                <img
-                                  data-src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847722018-8TCT6PT455LE207HT5NA/Aro+Ha_0428.jpg"
-                                  data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847722018-8TCT6PT455LE207HT5NA/Aro+Ha_0428.jpg"
-                                  data-image-dimensions="2500x1667" data-image-focal-point="0.5,0.5"
-                                  alt="Aro Ha_0428.jpg" data-load="false" />
-
-
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-
-                        <figure class="gallery-lightbox-item"
-                          data-slide-url="ozg8val2si892dwucyqp9h02y2gp2s-k772h-2f5ym" data-test="gallery-lightbox-item">
-                          <div class="gallery-lightbox-item-wrapper">
-                            <div class="gallery-lightbox-item-src">
-                              <div class="
-                  gallery-lightbox-item-img
-                  content-fit
-                ">
-
-                                <img
-                                  data-src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847721684-YTD6Q5S75A0ZA9UW5PMN/Aro+Ha_0010.jpg"
-                                  data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847721684-YTD6Q5S75A0ZA9UW5PMN/Aro+Ha_0010.jpg"
-                                  data-image-dimensions="2500x1667" data-image-focal-point="0.5,0.5"
-                                  alt="Aro Ha_0010.jpg" data-load="false" />
-
-
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-
-                        <figure class="gallery-lightbox-item"
-                          data-slide-url="um0uwrm1vqr4tbv92xddp0ewbk7fny-g7ftz-glrmh" data-test="gallery-lightbox-item">
-                          <div class="gallery-lightbox-item-wrapper">
-                            <div class="gallery-lightbox-item-src">
-                              <div class="
-                  gallery-lightbox-item-img
-                  content-fit
-                ">
-
-                                <img
-                                  data-src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847721315-N2H1U9IQOPV7U46ZTICY/Aro+Ha_0393.jpg"
-                                  data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847721315-N2H1U9IQOPV7U46ZTICY/Aro+Ha_0393.jpg"
-                                  data-image-dimensions="2500x1667" data-image-focal-point="0.5,0.5"
-                                  alt="Aro Ha_0393.jpg" data-load="false" />
-
-
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-
-                        <figure class="gallery-lightbox-item"
-                          data-slide-url="oplw14tda9ls4bvtsyvpbribjbhm46-5gtmj-5xtcj" data-test="gallery-lightbox-item">
-                          <div class="gallery-lightbox-item-wrapper">
-                            <div class="gallery-lightbox-item-src">
-                              <div class="
-                  gallery-lightbox-item-img
-                  content-fit
-                ">
-
-                                <img
-                                  data-src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847720867-RDAE893FXFXK3PHOQ7JQ/Aro+Ha_0380.jpg"
-                                  data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847720867-RDAE893FXFXK3PHOQ7JQ/Aro+Ha_0380.jpg"
-                                  data-image-dimensions="2500x1667" data-image-focal-point="0.5,0.5"
-                                  alt="Aro Ha_0380.jpg" data-load="false" />
-
-
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-
+                  <div class="gallery-lightbox-header">
+                    <button class="gallery-lightbox-close-btn" aria-label="Close" data-close
+                      data-test="gallery-lightbox-close">
+                      <div class="gallery-lightbox-close-btn-icon">
+                        <svg viewBox="0 0 40 40">
+                          <path d="M4.3,35.7L35.7,4.3" />
+                          <path d="M4.3,4.3l31.4,31.4" />
+                        </svg>
                       </div>
-
-                      <div class="gallery-lightbox-controls" data-test="gallery-lightbox-controls">
-                        <div class="gallery-lightbox-control" data-previous
-                          data-test="gallery-lightbox-control-previous">
-                          <button class="gallery-lightbox-control-btn" aria-label="Previous Slide">
-                            <div class="gallery-lightbox-control-btn-icon">
-                              <svg class="caret-left-icon--small" viewBox="0 0 9 16">
-                                <polyline fill="none" stroke-miterlimit="10" points="7.3,14.7 2.5,8 7.3,1.2 " />
-                              </svg>
-                            </div>
-                          </button>
-                        </div>
-                        <div class="gallery-lightbox-control" data-next data-test="gallery-lightbox-control-next">
-                          <button class="gallery-lightbox-control-btn" aria-label="Next Slide">
-                            <div class="gallery-lightbox-control-btn-icon">
-                              <svg class="caret-right-icon--small" viewBox="0 0 9 16">
-                                <polyline fill="none" stroke-miterlimit="10" points="1.6,1.2 6.5,7.9 1.6,14.7 " />
-                              </svg>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-
-                    </div>
+                    </button>
                   </div>
 
+
+                  <div class="gallery-lightbox-wrapper">
+                    <div class="gallery-lightbox-list">
+
+                      <figure class="gallery-lightbox-item" data-slide-url="9eth1a4p3q36l61qqdipf1pl4f47ua"
+                        data-test="gallery-lightbox-item">
+                        <div class="gallery-lightbox-item-wrapper">
+                          <div class="gallery-lightbox-item-src">
+                            <div class="
+                  gallery-lightbox-item-img
+                  content-fit
+                ">
+
+                              <img
+                                data-src="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/71270471-6b60-4ff7-8547-5a8cda02c9a8/pexels-photo-106399.jpeg"
+                                data-image="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/71270471-6b60-4ff7-8547-5a8cda02c9a8/pexels-photo-106399.jpeg"
+                                data-image-dimensions="500x333" data-image-focal-point="0.5,0.5"
+                                alt="pexels-photo-106399.jpeg" data-load="false" />
+
+
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+
+                      <figure class="gallery-lightbox-item" data-slide-url="zs8ulb3yh10mmr51kzchlaqr82v64g"
+                        data-test="gallery-lightbox-item">
+                        <div class="gallery-lightbox-item-wrapper">
+                          <div class="gallery-lightbox-item-src">
+                            <div class="
+                  gallery-lightbox-item-img
+                  content-fit
+                ">
+
+                              <img
+                                data-src="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/ef8220f6-92cd-4234-987b-d7901323c8c7/pexels-photo-1396122.jpeg"
+                                data-image="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/ef8220f6-92cd-4234-987b-d7901323c8c7/pexels-photo-1396122.jpeg"
+                                data-image-dimensions="500x333" data-image-focal-point="0.5,0.5"
+                                alt="pexels-photo-1396122.jpeg" data-load="false" />
+
+
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+
+                      <figure class="gallery-lightbox-item" data-slide-url="deqossdjfoa9qut4pn7war7u34b55i"
+                        data-test="gallery-lightbox-item">
+                        <div class="gallery-lightbox-item-wrapper">
+                          <div class="gallery-lightbox-item-src">
+                            <div class="
+                  gallery-lightbox-item-img
+                  content-fit
+                ">
+
+                              <img
+                                data-src="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/ef2ded71-e755-4de1-9553-0c00506e3ce4/14313397.jpg"
+                                data-image="https://images.squarespace-cdn.com/content/v1/621e97fe2ac3b9297c55bbfb/ef2ded71-e755-4de1-9553-0c00506e3ce4/14313397.jpg"
+                                data-image-dimensions="226x340" data-image-focal-point="0.5,0.5" alt="14313397.jpg"
+                                data-load="false" />
+
+
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+
+                      <figure class="gallery-lightbox-item" data-slide-url="pjb6mfpk9rq99jwr5rvddo3hxyz2cv-f3elp-rmdyf"
+                        data-test="gallery-lightbox-item">
+                        <div class="gallery-lightbox-item-wrapper">
+                          <div class="gallery-lightbox-item-src">
+                            <div class="
+                  gallery-lightbox-item-img
+                  content-fit
+                ">
+
+                              <img
+                                data-src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847722018-8TCT6PT455LE207HT5NA/Aro+Ha_0428.jpg"
+                                data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847722018-8TCT6PT455LE207HT5NA/Aro+Ha_0428.jpg"
+                                data-image-dimensions="2500x1667" data-image-focal-point="0.5,0.5" alt="Aro Ha_0428.jpg"
+                                data-load="false" />
+
+
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+
+                      <figure class="gallery-lightbox-item" data-slide-url="ozg8val2si892dwucyqp9h02y2gp2s-k772h-2f5ym"
+                        data-test="gallery-lightbox-item">
+                        <div class="gallery-lightbox-item-wrapper">
+                          <div class="gallery-lightbox-item-src">
+                            <div class="
+                  gallery-lightbox-item-img
+                  content-fit
+                ">
+
+                              <img
+                                data-src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847721684-YTD6Q5S75A0ZA9UW5PMN/Aro+Ha_0010.jpg"
+                                data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847721684-YTD6Q5S75A0ZA9UW5PMN/Aro+Ha_0010.jpg"
+                                data-image-dimensions="2500x1667" data-image-focal-point="0.5,0.5" alt="Aro Ha_0010.jpg"
+                                data-load="false" />
+
+
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+
+                      <figure class="gallery-lightbox-item" data-slide-url="um0uwrm1vqr4tbv92xddp0ewbk7fny-g7ftz-glrmh"
+                        data-test="gallery-lightbox-item">
+                        <div class="gallery-lightbox-item-wrapper">
+                          <div class="gallery-lightbox-item-src">
+                            <div class="
+                  gallery-lightbox-item-img
+                  content-fit
+                ">
+
+                              <img
+                                data-src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847721315-N2H1U9IQOPV7U46ZTICY/Aro+Ha_0393.jpg"
+                                data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847721315-N2H1U9IQOPV7U46ZTICY/Aro+Ha_0393.jpg"
+                                data-image-dimensions="2500x1667" data-image-focal-point="0.5,0.5" alt="Aro Ha_0393.jpg"
+                                data-load="false" />
+
+
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+
+                      <figure class="gallery-lightbox-item" data-slide-url="oplw14tda9ls4bvtsyvpbribjbhm46-5gtmj-5xtcj"
+                        data-test="gallery-lightbox-item">
+                        <div class="gallery-lightbox-item-wrapper">
+                          <div class="gallery-lightbox-item-src">
+                            <div class="
+                  gallery-lightbox-item-img
+                  content-fit
+                ">
+
+                              <img
+                                data-src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847720867-RDAE893FXFXK3PHOQ7JQ/Aro+Ha_0380.jpg"
+                                data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847720867-RDAE893FXFXK3PHOQ7JQ/Aro+Ha_0380.jpg"
+                                data-image-dimensions="2500x1667" data-image-focal-point="0.5,0.5" alt="Aro Ha_0380.jpg"
+                                data-load="false" />
+
+
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+
+                    </div>
+
+                    <div class="gallery-lightbox-controls" data-test="gallery-lightbox-controls">
+                      <div class="gallery-lightbox-control" data-previous data-test="gallery-lightbox-control-previous">
+                        <button class="gallery-lightbox-control-btn" aria-label="Previous Slide">
+                          <div class="gallery-lightbox-control-btn-icon">
+                            <svg class="caret-left-icon--small" viewBox="0 0 9 16">
+                              <polyline fill="none" stroke-miterlimit="10" points="7.3,14.7 2.5,8 7.3,1.2 " />
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="gallery-lightbox-control" data-next data-test="gallery-lightbox-control-next">
+                        <button class="gallery-lightbox-control-btn" aria-label="Next Slide">
+                          <div class="gallery-lightbox-control-btn-icon">
+                            <svg class="caret-right-icon--small" viewBox="0 0 9 16">
+                              <polyline fill="none" stroke-miterlimit="10" points="1.6,1.2 6.5,7.9 1.6,14.7 " />
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
+
               </div>
-
-
             </div>
+
+
           </div>
-
-
-
         </div>
+
+
+
       </div>
+    </div>
 
-    </section>
+  </section>
 
 
-    <main id="page" class="container" role="main">
+  <main id="page" class="container" role="main">
 
-      <article class="sections" data-page-sections="621ea42c2ba1053e3a08dcc8" id="sections">
+    <article class="sections" data-page-sections="621ea42c2ba1053e3a08dcc8" id="sections">
 
-        <section data-test="page-section" data-section-theme="white" style="padding: 50px;"
-        
-        class='page-section 
+      <section data-test="page-section" data-section-theme="white" style="padding: 50px;" class='page-section 
     
       user-items-list-section
       full-bleed-section
@@ -1327,17 +1340,17 @@
 &quot;backgroundMode&quot;: &quot;image&quot;,
 &quot;backgroundImage&quot;: null
 }" data-animation="" data-json-schema-section>
-          <div class="section-background">
+        <div class="section-background">
 
 
 
-          </div>
-          <div class="content-wrapper" style='
+        </div>
+        <div class="content-wrapper" style='
       
         
       
     '>
-            <div class="content">
+          <div class="content">
 
 
 
@@ -1360,13 +1373,13 @@
 
 
 
-              <div class="user-items-list" style="
+            <div class="user-items-list" style="
     min-height: 100px;
     padding-top: 0vmax;
     padding-bottom: 3.3vmax;
     " data-card-theme="" data-section-id="user-items-list" data-section-title-enabled="true"
-                data-space-below-section-title-value="40" data-space-below-section-title-unit="px"
-                data-layout-width="full">
+              data-space-below-section-title-value="40" data-space-below-section-title-unit="px"
+              data-layout-width="full">
 
 
                 <div class="list-section-title" id="621ea5302dc8b5205fe99e87" style="padding-bottom: 40px;"
@@ -1416,36 +1429,36 @@
 
 
 
-                <style>
-                  .user-items-list-item-container[data-section-id="621ea5302dc8b5205fe99e87"] .list-item-content__title {
-                    font-size: 1.6rem;
+              <style>
+                .user-items-list-item-container[data-section-id="621ea5302dc8b5205fe99e87"] .list-item-content__title {
+                  font-size: 1.6rem;
+                }
+
+                .user-items-list-item-container[data-section-id="621ea5302dc8b5205fe99e87"] .list-item-content__description {
+                  font-size: 1rem;
+                }
+
+                .user-items-list-item-container[data-section-id="621ea5302dc8b5205fe99e87"] .list-item-content__button {
+                  font-size: 0.9rem;
+                }
+
+                @supports (--test-custom-property: true) {
+                  .user-items-list-item-container[data-section-id="621ea5302dc8b5205fe99e87"] {
+                    --title-font-size-value: 1.6;
+                    --body-font-size-value: 1;
+                    --button-font-size-value: 0.9;
                   }
-
-                  .user-items-list-item-container[data-section-id="621ea5302dc8b5205fe99e87"] .list-item-content__description {
-                    font-size: 1rem;
-                  }
-
-                  .user-items-list-item-container[data-section-id="621ea5302dc8b5205fe99e87"] .list-item-content__button {
-                    font-size: 0.9rem;
-                  }
-
-                  @supports (--test-custom-property: true) {
-                    .user-items-list-item-container[data-section-id="621ea5302dc8b5205fe99e87"] {
-                      --title-font-size-value: 1.6;
-                      --body-font-size-value: 1;
-                      --button-font-size-value: 0.9;
-                    }
-                  }
-                </style>
+                }
+              </style>
 
 
-                <ul class="
+              <ul class="
     user-items-list-item-container
     user-items-list-simple
   " style="
     grid-gap: 60px 60px;
   " data-controller="UserItemsListSimple" data-num-columns="3" data-content-order="media-first"
-                  data-alignment-vertical="top" data-section-id="621ea5302dc8b5205fe99e87" data-current-context="{
+                data-alignment-vertical="top" data-section-id="621ea5302dc8b5205fe99e87" data-current-context="{
 &quot;userItems&quot;: [ {
   &quot;title&quot;: &quot;Buy&quot;,
   &quot;description&quot;: &quot;&lt;p class=\&quot;\&quot; style=\&quot;white-space:pre-wrap;\&quot;&gt;Browse our reviewed listing and make an offer today!&lt;\/p&gt;&quot;,
@@ -1755,15 +1768,15 @@
   &quot;unit&quot;: &quot;px&quot;
 }
 }" data-media-alignment="center" data-title-alignment="center" data-body-alignment="center"
-                  data-button-alignment="center" data-title-placement="center" data-body-placement="center"
-                  data-button-placement="center" data-layout-width="full" data-title-font-unit="rem"
-                  data-description-font-unit="rem" data-button-font-unit="rem" data-space-between-rows="60px"
-                  data-space-between-columns="60px" data-vertical-padding-top-value="0"
-                  data-vertical-padding-bottom-value="3.3" data-vertical-padding-top-unit="vmax"
-                  data-vertical-padding-bottom-unit="vmax">
+                data-button-alignment="center" data-title-placement="center" data-body-placement="center"
+                data-button-placement="center" data-layout-width="full" data-title-font-unit="rem"
+                data-description-font-unit="rem" data-button-font-unit="rem" data-space-between-rows="60px"
+                data-space-between-columns="60px" data-vertical-padding-top-value="0"
+                data-vertical-padding-bottom-value="3.3" data-vertical-padding-top-unit="vmax"
+                data-vertical-padding-bottom-unit="vmax">
 
 
-                  <li class="
+                <li class="
         list-item
         
           list-item-basic-animation
@@ -1781,54 +1794,55 @@
 
 
 
-                    <div class="list-item-media" style="
+                  <div class="list-item-media" style="
           
             margin-bottom: 4%;
           
           width: 50%;
         ">
-                      <div class="list-item-media-inner" data-aspect-ratio="4:3" data-animation-role="image">
-                        <img data-image-focal-point="," alt="" data-src="./pictures/handshake.jpg"
-                          data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1618497259178-6XJGK9GR6YAVBQL5L519/20140301_Trade-151_012-2.jpg"
-                          data-image-dimensions="2500x1518" data-image-focal-point="0.5,0.5"
-                          alt="20140301_Trade-151_012-2.jpg" class="list-image" data-load="false" data-mode="cover"
-                          data-use-advanced-positioning="true" />
-                      </div>
+                    <div class="list-item-media-inner" data-aspect-ratio="4:3" data-animation-role="image">
+                      <img data-image-focal-point="," alt="" data-src="./pictures/handshake.jpg"
+                        data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1618497259178-6XJGK9GR6YAVBQL5L519/20140301_Trade-151_012-2.jpg"
+                        data-image-dimensions="2500x1518" data-image-focal-point="0.5,0.5"
+                        alt="20140301_Trade-151_012-2.jpg" class="list-image" data-load="false" data-mode="cover"
+                        data-use-advanced-positioning="true" />
                     </div>
+                  </div>
 
 
 
-                    <div class="list-item-content">
+                  <div class="list-item-content">
 
 
-                      <div class="list-item-content__text-wrapper">
+                    <div class="list-item-content__text-wrapper">
 
 
-                        <h2 class="list-item-content__title" style="max-width: relative;">Buy</h2>
+                      <h2 class="list-item-content__title" style="max-width: relative;">Buy</h2>
 
 
 
-                        <div class="list-item-content__description
+                      <div class="list-item-content__description
           
           " style="
             margin-top: 15%;
             max-width: 100%;
           ">
-                          <p class="" style="white-space:pre-wrap;">Browse our reviewed listing and make an offer today!</p>
-                        </div>
-
-
+                        <p class="" style="white-space:pre-wrap;">Browse our reviewed listing and make an offer today!
+                        </p>
                       </div>
 
 
+                    </div>
 
-                      <div class="list-item-content__button-wrapper">
 
-                        <div class="list-item-content__button-container" style="
+
+                    <div class="list-item-content__button-wrapper">
+
+                      <div class="list-item-content__button-container" style="
           margin-top: 4%;
           max-width: relative;
         " data-animation-role="button">
-                          <a class="
+                        <a class="
             list-item-content__button
             sqs-block-button-element
             
@@ -1837,18 +1851,18 @@
               sqs-button-element--primary
             
           " href="buy.html">Buy</a>
-                        </div>
-
                       </div>
 
                     </div>
 
+                  </div>
 
 
-                  </li>
+
+                </li>
 
 
-                  <li class="
+                <li class="
         list-item
         
           list-item-basic-animation
@@ -1866,54 +1880,54 @@
 
 
 
-                    <div class="list-item-media" style="
+                  <div class="list-item-media" style="
           
             margin-bottom: 4%;
           
           width: 50%;
         ">
-                      <div class="list-item-media-inner" data-aspect-ratio="4:3" data-animation-role="image">
-                        <img data-image-focal-point="," alt="" data-src="./pictures/sale.jpg"
-                          data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1607694583486-2PQT0LQ193RL7MCB6DX4/20140228_Trade+151_0046.jpg"
-                          data-image-dimensions="5000x3333" data-image-focal-point="0.5,0.5"
-                          alt="20140228_Trade 151_0046.jpg" class="list-image" data-load="false" data-mode="cover"
-                          data-use-advanced-positioning="true" />
-                      </div>
+                    <div class="list-item-media-inner" data-aspect-ratio="4:3" data-animation-role="image">
+                      <img data-image-focal-point="," alt="" data-src="./pictures/sale.jpg"
+                        data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1607694583486-2PQT0LQ193RL7MCB6DX4/20140228_Trade+151_0046.jpg"
+                        data-image-dimensions="5000x3333" data-image-focal-point="0.5,0.5"
+                        alt="20140228_Trade 151_0046.jpg" class="list-image" data-load="false" data-mode="cover"
+                        data-use-advanced-positioning="true" />
                     </div>
+                  </div>
 
 
 
-                    <div class="list-item-content">
+                  <div class="list-item-content">
 
 
-                      <div class="list-item-content__text-wrapper">
+                    <div class="list-item-content__text-wrapper">
 
 
-                        <h2 class="list-item-content__title" style="max-width: 100%;">Sell</h2>
+                      <h2 class="list-item-content__title" style="max-width: 100%;">Sell</h2>
 
 
 
-                        <div class="list-item-content__description
+                      <div class="list-item-content__description
           
           " style="
             margin-top: 15%;
             max-width: 100%;
           ">
-                          <p class="" style="white-space:pre-wrap;">Easily create a listing and advertise your home!</p>
-                        </div>
-
-
+                        <p class="" style="white-space:pre-wrap;">Easily create a listing and advertise your home!</p>
                       </div>
 
 
+                    </div>
 
-                      <div class="list-item-content__button-wrapper">
 
-                        <div class="list-item-content__button-container" style="
+
+                    <div class="list-item-content__button-wrapper">
+
+                      <div class="list-item-content__button-container" style="
           margin-top: 4%;
           max-width: 100%;
         " data-animation-role="button">
-                          <a class="
+                        <a class="
             list-item-content__button
             sqs-block-button-element
             
@@ -1922,18 +1936,18 @@
               sqs-button-element--primary
             
           " href="sell.html">Sell</a>
-                        </div>
-
                       </div>
 
                     </div>
 
+                  </div>
 
 
-                  </li>
+
+                </li>
 
 
-                  <li class="
+                <li class="
         list-item
         
           list-item-basic-animation
@@ -1951,53 +1965,53 @@
 
 
 
-                    <div class="list-item-media" style="
+                  <div class="list-item-media" style="
           
             margin-bottom: 4%;
           
           width: 50%;
         ">
-                      <div class="list-item-media-inner" data-aspect-ratio="4:3" data-animation-role="image">
-                        <img data-image-focal-point="," alt="" data-src="./pictures/agent.jpg"
-                          data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1607694644871-IC85FNH781UNZSZEGHDR/Aro+Ha_0428.jpg"
-                          data-image-dimensions="5000x3333" data-image-focal-point="0.5,0.5" alt="Aro Ha_0428.jpg"
-                          class="list-image" data-load="false" data-mode="cover" data-use-advanced-positioning="true" />
-                      </div>
+                    <div class="list-item-media-inner" data-aspect-ratio="4:3" data-animation-role="image">
+                      <img data-image-focal-point="," alt="" data-src="./pictures/agent.jpg"
+                        data-image="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1607694644871-IC85FNH781UNZSZEGHDR/Aro+Ha_0428.jpg"
+                        data-image-dimensions="5000x3333" data-image-focal-point="0.5,0.5" alt="Aro Ha_0428.jpg"
+                        class="list-image" data-load="false" data-mode="cover" data-use-advanced-positioning="true" />
                     </div>
+                  </div>
 
 
 
-                    <div class="list-item-content">
+                  <div class="list-item-content">
 
 
-                      <div class="list-item-content__text-wrapper">
+                    <div class="list-item-content__text-wrapper">
 
 
-                        <h2 class="list-item-content__title" style="max-width: relative;">Agents Optional</h2>
+                      <h2 class="list-item-content__title" style="max-width: relative;">Agents Optional</h2>
 
 
 
-                        <div class="list-item-content__description
+                      <div class="list-item-content__description
           
           " style="
             margin-top: 15%;
             max-width: 100%;
           ">
-                          <p class="" >Our agents are available to help with the legal and paper work.</p>
-                        </div>
-
-
+                        <p class="">Our agents are available to help with the legal and paper work.</p>
                       </div>
 
 
+                    </div>
 
-                      <div class="list-item-content__button-wrapper">
 
-                        <div class="list-item-content__button-container" style="
+
+                    <div class="list-item-content__button-wrapper">
+
+                      <div class="list-item-content__button-container" style="
           margin-top: 4%;
           max-width: 100%;
         " data-animation-role="button">
-                          <a class="
+                        <a class="
             list-item-content__button
             sqs-block-button-element
             
@@ -2005,23 +2019,18 @@
               sqs-block-button-element--medium
               sqs-button-element--primary
             
-          " href="contact-agent.html">  Contact an agent</a>
-                        </div>
-
+          " href="contact-agent.html"> Contact an agent</a>
                       </div>
 
                     </div>
 
-
-
-                  </li>
-
-                </ul>
+                  </div>
 
 
 
+                </li>
 
-
+              </ul>
 
 
 
@@ -2029,52 +2038,57 @@
 
 
 
-              </div>
 
 
 
 
 
             </div>
+
+
+
+
+
           </div>
+        </div>
 
-        </section>
-
-
-
-
-
-      </article>
+      </section>
 
 
 
 
 
+    </article>
 
 
-    </main>
-    <script type="text/javascript">
-      const firstSection = document.querySelector('.page-section');
-      const header = document.querySelector('.header');
-      const mobileOverlayNav = document.querySelector('.header-menu');
-      const sectionBackground = firstSection ? firstSection.querySelector('.section-background') : null;
-      const headerHeight = header ? header.getBoundingClientRect().height : 0;
-      const firstSectionHasBackground = firstSection ? firstSection.className.indexOf('has-background') >= 0 : false;
-      const isFirstSectionInset = firstSection ? firstSection.className.indexOf('background-width--inset') >= 0 : false;
-      const isLayoutEngineSection = firstSection ? firstSection.className.indexOf('layout-engine-section') >= 0 : false;
 
-      if (firstSection) {
-        firstSection.style.paddingTop = headerHeight + 'px';
+
+
+
+
+  </main>
+  <script type="text/javascript">
+    const firstSection = document.querySelector('.page-section');
+    const header = document.querySelector('.header');
+    const mobileOverlayNav = document.querySelector('.header-menu');
+    const sectionBackground = firstSection ? firstSection.querySelector('.section-background') : null;
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const firstSectionHasBackground = firstSection ? firstSection.className.indexOf('has-background') >= 0 : false;
+    const isFirstSectionInset = firstSection ? firstSection.className.indexOf('background-width--inset') >= 0 : false;
+    const isLayoutEngineSection = firstSection ? firstSection.className.indexOf('layout-engine-section') >= 0 : false;
+
+    if (firstSection) {
+      firstSection.style.paddingTop = headerHeight + 'px';
+    }
+    if (sectionBackground && isLayoutEngineSection) {
+      if (isFirstSectionInset) {
+        sectionBackground.style.top = headerHeight + 'px';
+      } else {
+        sectionBackground.style.top = '';
       }
-      if (sectionBackground && isLayoutEngineSection) {
-        if (isFirstSectionInset) {
-          sectionBackground.style.top = headerHeight + 'px';
-        } else {
-          sectionBackground.style.top = '';
-        }
-      }
+    }
         //# sourceURL=headerPositioning.js
-    </script>
+  </script>
 
 
 

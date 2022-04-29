@@ -119,6 +119,43 @@
 
   <link rel="stylesheet" href="ourstyle.css">
 
+  <script>
+    
+
+    function login(create) {
+      if (!create) {
+        type = document.getElementById("type").value;
+        localStorage.setItem("loggedin", type);
+        type = document.getElementById("type").value;
+        localStorage.setItem("loggedin", type);
+        if (type == "User") {
+          window.location.href = "account.html";
+        } else if (type == "Agent") {
+          window.location.href = "agent-dealings.html";
+        }
+      }else{
+        alert("new");
+        localStorage.setItem("loggedin", "User");
+        window.location.href = "account.html";
+      }
+
+    }
+  </script>
+  <script>
+    function loadFunction() {
+      log = localStorage.loggedin;
+      if (log == "User") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "account.html";
+      } else if (log == "Agent") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "agent-dealings.html";
+      }
+
+    }
+  </script>
 </head>
 
 <body id="collection-621e98bab4cb312e302d3762" data-controller="SiteLoader, Flags" class="
@@ -132,7 +169,7 @@
           
         
       
-    " tabindex="-1">
+    " tabindex="-1" onload="loadFunction()">
   <div id="siteWrapper" class="clearfix site-wrapper ">
 
     <div class="floating-cart hidden" data-controller="FloatingCart">
@@ -289,7 +326,7 @@
 
       <div class="sqs-announcement-bar-dropzone"></div>
 
-      <div class="header-announcement-bar-wrapper"style="padding-bottom: 10px; padding-top: 10px;">
+      <div class="header-announcement-bar-wrapper" style="padding-bottom: 10px; padding-top: 10px;">
 
         <a href="#page" tabindex="1" class="header-skip-link sqs-button-element--primary">
           Skip to Content
@@ -476,7 +513,7 @@
 
 
               <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-                <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="login.html">
+                <a  id="topright" class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="login.html">
                   Create Account / Login
                 </a>
               </div>
@@ -930,9 +967,9 @@
 
                                   <input class="field-element" id="email-yui_3_17_2_1_1564674081737_5859-field"
                                     name="email" type="email" autocomplete="email" spellcheck="false"
-                                    aria-required="true" required  data-component="email"/>
+                                    aria-required="true" required data-component="email" />
                                 </div>
-                                
+
 
 
                                 <div id="text-yui_3_17_2_1_1564673948220_25028" class="form-item field text required">
@@ -970,11 +1007,10 @@
           
             form-button-wrapper--align-left
           
-        "> <a href="account.html" id="LoginButton">
-                                  <input
-                                    class="button sqs-system-button sqs-editable-button sqs-button-element--primary"
-                                    type="button" value="Login"> </input>
-                                </a>
+        ">
+                                <input class="button sqs-system-button sqs-editable-button sqs-button-element--primary"
+                                  type="button" value="Login" onclick="login(false)"> </input>
+
                               </div>
 
 
@@ -1092,11 +1128,11 @@
                                   </label>
 
                                   <input type="email" id="input_13" name="q13_email13"
-                                    class="form-textbox validate[Email] field-element" data-defaultvalue="" style="width:310px"
-                                    size="310" value="" placeholder="ex: myname@example.com" data-component="email"
-                                    aria-labelledby="label_13 sublabel_input_13">
+                                    class="form-textbox validate[Email] field-element" data-defaultvalue=""
+                                    style="width:310px" size="310" value="" placeholder="ex: myname@example.com"
+                                    data-component="email" aria-labelledby="label_13 sublabel_input_13">
 
-                                  
+
                                 </div>
 
 
@@ -1167,12 +1203,12 @@
           form-button-wrapper
           
         ">
-                                <a href="account.html">
+                                
                                   <input
                                     class="button sqs-system-button sqs-editable-button sqs-button-element--primary"
-                                    type="button" value="Create Account" />
+                                    type="button" value="Create Account" onclick="login(true)"/>
                               </div>
-                              </a>
+                              
 
 
 

@@ -107,7 +107,22 @@
   </style>
 
   <link rel="stylesheet" href="ourstyle.css">
+  <script>
+    function loadFunction() {
+      
+      log = localStorage.loggedin;
+      if (log == "User") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "account.html";
+      } else if (log == "Agent") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "agent-dealings.html";
+      }
 
+    }
+  </script>
 </head>
 
 <body id="collection-62684f2b9bee1b7b41dcc418" data-controller="SiteLoader, Flags" class="
@@ -121,7 +136,7 @@
           
         
       
-    " tabindex="-1">
+    " tabindex="-1"onload="loadFunction()">
   <div id="siteWrapper" class="clearfix site-wrapper ">
 
     <div class="floating-cart hidden" data-controller="FloatingCart" data-controllers-bound="FloatingCart">
@@ -476,7 +491,7 @@
 
 
               <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-                <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="login.html">
+                <a id="topright"  class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="login.html">
                   Create Account / Login
                 </a>
               </div>

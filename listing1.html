@@ -140,6 +140,21 @@
 
     }
   </script>
+  <script>
+    function loadFunction() {
+      log = localStorage.loggedin;
+      if (log == "User") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "account.html";
+      } else if (log == "Agent") {
+        button = document.getElementById("topright");
+        button.innerHTML = "Your Account";
+        button.href = "agent-dealings.html";
+      }
+
+    }
+  </script>
 </head>
 
 <body id="item-621e98281b7d863bc40affa3" data-controller="SiteLoader, Flags" class="
@@ -156,7 +171,7 @@
           
         
       
-    " tabindex="-1">
+    " tabindex="-1"onload="loadFunction() ">
   <div id="siteWrapper" class="clearfix site-wrapper ">
 
     <div class="floating-cart hidden" data-controller="FloatingCart">
@@ -1537,7 +1552,7 @@
                       </style>
                     </div>
                   </div>
-                  <script>#gmap_canvas { width: 100 %; height: auto; } </script>
+                  <script>#gmap_canvas { width: 100 %; height: auto; loadFunction(); } </script>
                 </div>
 
               </div>
@@ -1873,6 +1888,7 @@
       }
     }
         //# sourceURL=headerPositioning.js
+        loadFunction();
   </script>
 
 
@@ -2215,7 +2231,7 @@ strong.link-email-footer {
     src="https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/scripts/site-bundle.f2e810d46b4df413ac428be06e1f8f69.js"
     type="text/javascript"></script>
   <script type="text/javascript"
-    data-sqs-type="imageloader-bootstrapper">(function () { if (window.ImageLoader) { window.ImageLoader.bootstrap({}, document); } })();</script>
+    data-sqs-type="imageloader-bootstrapper">(function () { if (window.ImageLoader) { window.ImageLoader.bootstrap({}, document); } })();loadFunction(); </script>
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none" data-usage="social-icons-svg">
     <symbol id="instagram-unauth-icon" viewBox="0 0 64 64">
       <path
