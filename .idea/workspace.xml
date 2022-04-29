@@ -3,7 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0f48a369-4066-406b-90fb-e9e34b8c921d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agent-dealings.html" beforeDir="false" afterPath="$PROJECT_DIR$/agent-dealings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookmarks.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookmarks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buy.html" beforeDir="false" afterPath="$PROJECT_DIR$/buy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-agent.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact-agent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing1.html" beforeDir="false" afterPath="$PROJECT_DIR$/listing1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sell.html" beforeDir="false" afterPath="$PROJECT_DIR$/sell.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yourlisting.html" beforeDir="false" afterPath="$PROJECT_DIR$/yourlisting.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
