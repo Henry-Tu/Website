@@ -1054,7 +1054,19 @@
                           }
                         </style>
 
+
                         <ul>
+
+                          <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn"><span class="span">Sort Listings</span></a>
+                            <div class="dropdown-content">
+                              <a href="javascript:void(0)">Newest Listing First</a>
+                              <a href="javascript:void(0)">Oldest Listing First</a>
+                              <a href="javascript:void(0)">Most Expensive Listing First</a>
+                              <a href="javascript:void(0)">Least Expensive Listing First</a>
+                            </div>
+                          </li>
+
                           <li class="dropdown">
                             <a href="javascript:void(0)" class="dropbtn"><span class="span">Bathrooms</span> </a>
                             <div class="dropdown-content">
@@ -1084,16 +1096,32 @@
                             </div>
                           </li>
 
+                          <li>
                           <div>
                             <section class="range-slider">
-                              <p>Price Range</p><br>
+                              <p>Price Range - Dollars</p><br>
+                              <span class="rangeValues"></span>
+                              <input value="100000" min="500000" max="4000000" step="500" type="range">
+                              <input value="4000000" min="500000" max="4000000" step="500" type="range">
+                            </section>
+                          </div>
+                          </li>
+                          <!-- double slider taken from: https://codepen.io/rendykstan/pen/VLqZGO -->
+                          <li>
+                          <div>
+                            &nbsp; &nbsp; &nbsp;
+                          </div>
+                          </li>
+                          <li>
+                          <div>
+                            <section class="range-slider">
+                              <p>Square Footage</p><br>
                               <span class="rangeValues"></span>
                               <input value="500" min="500" max="50000" step="500" type="range">
                               <input value="50000" min="500" max="50000" step="500" type="range">
                             </section>
                           </div>
-                          <!-- double slider taken from: https://codepen.io/rendykstan/pen/VLqZGO -->
-
+                          </li>
                         </ul>
 
                       </div>
@@ -1115,9 +1143,8 @@
             var slide2 = parseFloat(slides[1].value);
             // Neither slider will clip the other, so make sure we determine which is larger
             if (slide1 > slide2) { var tmp = slide2; slide2 = slide1; slide1 = tmp; }
-
             var displayElement = parent.getElementsByClassName("rangeValues")[0];
-            displayElement.innerHTML = "$ " + slide1 + "k - $" + slide2 + "k";
+            displayElement.innerHTML = " " + slide1 + " - " + slide2 + " ";
           }
 
           window.onload = function () {
@@ -1289,17 +1316,7 @@
                       id="block-yui_3_17_2_1_1646263900139_12059">
                       <div class="sqs-block-content">
 
-                        <ul>
-                          <li class="dropdown">
-                            <a href="javascript:void(0)" class="dropbtn"><span class="span">Sort Listings</span></a>
-                            <div class="dropdown-content">
-                              <a href="javascript:void(0)">Newest Listing First</a>
-                              <a href="javascript:void(0)">Oldest Listing First</a>
-                              <a href="javascript:void(0)">Most Expensive Listing First</a>
-                              <a href="javascript:void(0)">Least Expensive Listing First</a>
-                            </div>
-                          </li>
-                        </ul>
+                        
 
                       </div>
                     </div>
