@@ -37,3 +37,7 @@ padding: 0px;
 .btn--border theme-btn--primary-inverse sqs-button-element--primary:hover{
     background-color: #f7f7f7;
 }
+a.grid-item{
+    background-color: #f7f7f7;
+    padding: 5%;
+}
