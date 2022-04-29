@@ -295,35 +295,37 @@
   <link rel="stylesheet" href="ourstyle.css">
 
   <script>
-    function myFunction() {
-      alert("Thank you, your listing has been recieved and will be reviewed by an agent shortly.");
-    }
+
 
   </script>
   <script>
     log = localStorage.loggedin;
-      if (log == "User") {
-        button = document.getElementById("topright");
-        button.innerHTML = "Your Account";
-        button.href = "account.html";
-      } else if (log == "Agent") {
-        button = document.getElementById("topright");
-        button.innerHTML = "Your Account";
-        button.href = "agent-dealings.html";
-      } else{
-        alert("Please login to create a listing");
-        window.location.href = "login.html";
-      }
+    
+    if (log == "User") {
+      button = document.getElementById("topright");
+      button.innerHTML = "Your Account";
+      button.href = "account.html";
+      form = document.getElementById("221177250447251");
+      form.action = "yourlisting.html";
+    } else if (log == "Agent") {
+      button = document.getElementById("topright");
+      button.innerHTML = "Your Account";
+      button.href = "agent-dealings.html";
+      form.action = "yourlisting.html";
+    }
     function loadFunction() {
       log = localStorage.loggedin;
       if (log == "User") {
         button = document.getElementById("topright");
         button.innerHTML = "Your Account";
         button.href = "account.html";
+        form.action = "yourlisting.html";
       } else if (log == "Agent") {
         button = document.getElementById("topright");
         button.innerHTML = "Your Account";
         button.href = "agent-dealings.html";
+        form = document.getElementById("221177250447251");
+        form.action = "yourlisting.html";
       }
 
     }
@@ -412,8 +414,8 @@
       JotForm.prepareCalculationsOnTheFly([null, null, { "name": "submitForm", "qid": "2", "text": "Submit Form", "type": "control_button" }, { "name": "clickTo3", "qid": "3", "text": "Create your listing", "type": "control_head" }, null, null, null, null, null, null, null, { "name": "name", "qid": "11", "text": "Name", "type": "control_fullname" }, { "name": "phoneNumber12", "qid": "12", "text": "Phone Number", "type": "control_phone" }, { "name": "email13", "qid": "13", "subLabel": "example@example.com", "text": "E-mail", "type": "control_email" }, { "name": "description", "qid": "14", "text": "Description ", "type": "control_textarea" }, null, null, { "name": "divider", "qid": "17", "type": "control_divider" }, { "description": "", "name": "typeA", "qid": "18", "text": "", "type": "control_radio" }, null, null, { "description": "", "name": "address", "qid": "21", "text": "Address", "type": "control_address" }, null, null, null, { "description": "", "name": "sizesquare", "qid": "25", "subLabel": "", "text": "Size (Square Feet)", "type": "control_textbox" }, null, { "description": "", "name": "price", "qid": "27", "subLabel": "", "text": "Price", "type": "control_textbox" }, null, null, null, { "description": "", "name": "bedrooms31", "qid": "31", "subLabel": "", "text": "Bedrooms", "type": "control_spinner" }, { "description": "", "name": "bathrooms", "qid": "32", "subLabel": "", "text": "Bathrooms", "type": "control_spinner" }, { "name": "contactInformation", "qid": "33", "text": "Contact Information", "type": "control_collapse" }, { "description": "", "name": "uploadProof", "qid": "34", "subLabel": "", "text": "Upload Proof of Ownership", "type": "control_fileupload" }, { "name": "listingInformation", "qid": "35", "text": "Listing Information", "type": "control_collapse" }, null, null, null, null, { "description": "", "name": "name40", "qid": "40", "text": "Amenities", "type": "control_checkbox" }, { "description": "", "name": "buildingType41", "qid": "41", "text": "Building type", "type": "control_radio" }, { "description": "", "name": "additionalFeatures", "qid": "42", "subLabel": "", "text": "Additional Features", "type": "control_textbox" }, { "description": "", "name": "pictures", "qid": "43", "subLabel": "", "text": "Pictures", "type": "control_fileupload" }]);
       setTimeout(function () {
         JotForm.paymentExtrasOnTheFly([null, null, { "name": "submitForm", "qid": "2", "text": "Submit Form", "type": "control_button" }, { "name": "clickTo3", "qid": "3", "text": "Create your listing", "type": "control_head" }, null, null, null, null, null, null, null, { "name": "name", "qid": "11", "text": "Name", "type": "control_fullname" }, { "name": "phoneNumber12", "qid": "12", "text": "Phone Number", "type": "control_phone" }, { "name": "email13", "qid": "13", "subLabel": "example@example.com", "text": "E-mail", "type": "control_email" }, { "name": "description", "qid": "14", "text": "Description ", "type": "control_textarea" }, null, null, { "name": "divider", "qid": "17", "type": "control_divider" }, { "description": "", "name": "typeA", "qid": "18", "text": "", "type": "control_radio" }, null, null, { "description": "", "name": "address", "qid": "21", "text": "Address", "type": "control_address" }, null, null, null, { "description": "", "name": "sizesquare", "qid": "25", "subLabel": "", "text": "Size (Square Feet)", "type": "control_textbox" }, null, { "description": "", "name": "price", "qid": "27", "subLabel": "", "text": "Price", "type": "control_textbox" }, null, null, null, { "description": "", "name": "bedrooms31", "qid": "31", "subLabel": "", "text": "Bedrooms", "type": "control_spinner" }, { "description": "", "name": "bathrooms", "qid": "32", "subLabel": "", "text": "Bathrooms", "type": "control_spinner" }, { "name": "contactInformation", "qid": "33", "text": "Contact Information", "type": "control_collapse" }, { "description": "", "name": "uploadProof", "qid": "34", "subLabel": "", "text": "Upload Proof of Ownership", "type": "control_fileupload" }, { "name": "listingInformation", "qid": "35", "text": "Listing Information", "type": "control_collapse" }, null, null, null, null, { "description": "", "name": "name40", "qid": "40", "text": "Amenities", "type": "control_checkbox" }, { "description": "", "name": "buildingType41", "qid": "41", "text": "Building type", "type": "control_radio" }, { "description": "", "name": "additionalFeatures", "qid": "42", "subLabel": "", "text": "Additional Features", "type": "control_textbox" }, { "description": "", "name": "pictures", "qid": "43", "subLabel": "", "text": "Pictures", "type": "control_fileupload" }]);
-      }, 20); 
-      
+      }, 20);
+
       loadFunction();
     </script>
     </head>
@@ -731,7 +733,8 @@
 
 
                 <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
-                  <a  id="topright" class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="login.html">
+                  <a id="topright" class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary"
+                    href="login.html">
                     Create Account / Login
                   </a>
                 </div>
@@ -1082,16 +1085,15 @@
         </div>
       </header>
 
-      <form class="jotform-form" action="yourlisting.html" enctype="multipart/form-data" name="form_221177250447251"
-        id="221177250447251" accept-charset="utf-8" autocomplete="on" onsubmit="myFunction()" style="background-color: white;">
+      <form class="jotform-form" action="login copy.html" enctype="multipart/form-data" name="form_221177250447251"
+        id="221177250447251" accept-charset="utf-8" autocomplete="on" style="background-color: white;"
+        onload="loadfunction();">
         <input type="hidden" name="formID" value="221177250447251" />
         <input type="hidden" id="JWTContainer" value="" />
         <input type="hidden" id="cardinalOrderNumber" value="" />
         <div role="main" class="form-all">
           <style>
-            
             background
-            
           </style>
           <ul class="form-section page-section">
             <li id="cid_3" class="form-input-wide" data-type="control_head">
@@ -1577,9 +1579,26 @@
                 <div id="cid_2" class="form-input-wide" data-layout="full">
                   <div data-align="center"
                     class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField">
+                    <script>
+                      log = localStorage.loggedin;
+                      
+                      if (log == "User") {
+                        button = document.getElementById("topright");
+                        button.innerHTML = "Your Account";
+                        button.href = "account.html";
+                        form = document.getElementById("221177250447251");
+                        form.action = "yourlisting.html";
+                      } else if (log == "Agent") {
+                        button = document.getElementById("topright");
+                        button.innerHTML = "Your Account";
+                        button.href = "agent-dealings.html";
+                        form = document.getElementById("221177250447251");
+                        form.action = "yourlisting.html";
+                      } 
+                    </script>
                     <button id="input_2" type="submit"
                       class="form-submit-button submit-button jf-form-buttons jsTest-submitField"
-                      data-component="button" data-content="">
+                      data-component="button" data-content="" onload="loadfunction();" onclick="loadfunction()">
                       Submit Form
                     </button>
                   </div>
@@ -1605,8 +1624,8 @@
 
         <div class="container-footer w-container">
           <div class="w-row">
-            <div class="footer-column w-clearfix w-col w-col-4"><img
-                    src="./pictures/Picture1.png" width="130" height="35" alt="">
+            <div class="footer-column w-clearfix w-col w-col-4"><img src="./pictures/Picture1.png" width="130"
+                height="35" alt="">
 
               <p class="footer-description-failory">Realistate © All Rights Reserved.<br></p>
             </div>
@@ -1616,18 +1635,45 @@
                   <div class="w-row">
                     <div class="w-col w-col-7 w-col-small-6 w-col-tiny-7">
                       <h3 class="footer-titles">Learn</h3>
-                      <p class="footer-links"><a href="" target="_blank"><span class="footer-link">Getting Started<br></span></a><a href=""><span class="footer-link">Successful Stories<br></span></a><a href=""><span class="footer-link">Blog</span></a><span><br></span><a href=""><span class="footer-link">Home Ownership Tools<br></span></a><a href=""><span class="footer-link">Expert Opinion<br></span></a><a href=""><span class="footer-link">Podcast</span></a><strong><br></strong></p>
+                      <p class="footer-links"><a href="" target="_blank"><span class="footer-link">Getting
+                            Started<br></span></a><a href=""><span class="footer-link">Successful
+                            Stories<br></span></a><a href=""><span
+                            class="footer-link">Blog</span></a><span><br></span><a href=""><span
+                            class="footer-link">Home Ownership Tools<br></span></a><a href=""><span
+                            class="footer-link">Expert Opinion<br></span></a><a href=""><span
+                            class="footer-link">Podcast</span></a><strong><br></strong></p>
                     </div>
                     <div class="w-col w-col-5 w-col-small-6 w-col-tiny-5">
                       <h3 class="footer-titles">Other</h3>
-                      <p class="footer-links"><a href=""><span class="footer-link">Sponsor Us!<br></span></a><a href=""><span class="footer-link">Open Startup<br></span></a><a href=""><span class="footer-link"></span></a><a href=""><span class="footer-link">Contribute<br></span></a><a href=""><span class="footer-link">FAQ</span></a><strong><br></strong></p>
+                      <p class="footer-links"><a href=""><span class="footer-link">Sponsor Us!<br></span></a><a
+                          href=""><span class="footer-link">Open Startup<br></span></a><a href=""><span
+                            class="footer-link"></span></a><a href=""><span
+                            class="footer-link">Contribute<br></span></a><a href=""><span
+                            class="footer-link">FAQ</span></a><strong><br></strong></p>
                     </div>
                   </div>
                 </div>
                 <div class="column-center-mobile w-col w-col-4">
-                  <h3 class="footer-titles">Follow Us!</h3><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbf0a2f2b67e3b3ba079c_Twitter%20Icon.svg" width="20" alt="Twitter icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbfe70fcf5a0514c5b1da_Instagram%20Icon.svg" width="20" alt="Instagram icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbe42e1e6034fdaba46f6_Facebook%20Icon.svg" width="20" alt="Facebook Icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dc0002f2b676eb4ba0869_LinkedIn%20Icon.svg" width="20" alt="LinkedIn Icon"></a><a href="" target="_blank" class="footer-social-network-icons w-inline-block"><img src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dc0112f2b6739c9ba0871_Pinterest%20Icon.svg" width="20" alt="Pinterest Icon" class=""></a>
-                  <p class="footer-description">Contact Us<a href=""><strong class="link-email-footer"></strong></a><br></p>
-                  <p class="footer-description">Terms and Conditions<strong class="link-email-footer"></strong></a><br></p>
+                  <h3 class="footer-titles">Follow Us!</h3><a href="" target="_blank"
+                    class="footer-social-network-icons w-inline-block"><img
+                      src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbf0a2f2b67e3b3ba079c_Twitter%20Icon.svg"
+                      width="20" alt="Twitter icon"></a><a href="" target="_blank"
+                    class="footer-social-network-icons w-inline-block"><img
+                      src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbfe70fcf5a0514c5b1da_Instagram%20Icon.svg"
+                      width="20" alt="Instagram icon"></a><a href="" target="_blank"
+                    class="footer-social-network-icons w-inline-block"><img
+                      src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dbe42e1e6034fdaba46f6_Facebook%20Icon.svg"
+                      width="20" alt="Facebook Icon"></a><a href="" target="_blank"
+                    class="footer-social-network-icons w-inline-block"><img
+                      src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dc0002f2b676eb4ba0869_LinkedIn%20Icon.svg"
+                      width="20" alt="LinkedIn Icon"></a><a href="" target="_blank"
+                    class="footer-social-network-icons w-inline-block"><img
+                      src="https://uploads-ssl.webflow.com/5966ea9a9217ca534caf139f/5c8dc0112f2b6739c9ba0871_Pinterest%20Icon.svg"
+                      width="20" alt="Pinterest Icon" class=""></a>
+                  <p class="footer-description">Contact Us<a href=""><strong class="link-email-footer"></strong></a><br>
+                  </p>
+                  <p class="footer-description">Terms and Conditions<strong class="link-email-footer"></strong></a><br>
+                  </p>
                 </div>
               </div>
             </div>
@@ -1635,298 +1681,297 @@
         </div>
 
         <style>
-body {
-  background: #DCDCDC;
-}
+          body {
+            background: #DCDCDC;
+          }
 
-div.container-footer.w-container {
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 940px;
-  padding-bottom: 40px;
-  padding-top: 70px;
-}
+          div.container-footer.w-container {
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 940px;
+            padding-bottom: 40px;
+            padding-top: 70px;
+          }
 
-div.container-footer.w-container:after {
-  clear: both;
-  content: " ";
-  display: table;
-  grid-column-end: 2;
-  grid-column-start: 1;
-  grid-row-end: 2;
-  grid-row-start: 1;
-}
+          div.container-footer.w-container:after {
+            clear: both;
+            content: " ";
+            display: table;
+            grid-column-end: 2;
+            grid-column-start: 1;
+            grid-row-end: 2;
+            grid-row-start: 1;
+          }
 
-div.container-footer.w-container:before {
-  content: " ";
-  display: table;
-  grid-column-end: 2;
-  grid-column-start: 1;
-  grid-row-end: 2;
-  grid-row-start: 1;
-}
+          div.container-footer.w-container:before {
+            content: " ";
+            display: table;
+            grid-column-end: 2;
+            grid-column-start: 1;
+            grid-row-end: 2;
+            grid-row-start: 1;
+          }
 
-div.w-row {
-  box-sizing: border-box;
-  margin-left: -10px;
-  margin-right: -10px;
-}
+          div.w-row {
+            box-sizing: border-box;
+            margin-left: -10px;
+            margin-right: -10px;
+          }
 
-div.w-row:after {
-  clear: both;
-  content: " ";
-  display: table;
-  grid-column-end: 2;
-  grid-column-start: 1;
-  grid-row-end: 2;
-  grid-row-start: 1;
-}
+          div.w-row:after {
+            clear: both;
+            content: " ";
+            display: table;
+            grid-column-end: 2;
+            grid-column-start: 1;
+            grid-row-end: 2;
+            grid-row-start: 1;
+          }
 
-div.w-row:before {
-  content: " ";
-  display: table;
-  grid-column-end: 2;
-  grid-column-start: 1;
-  grid-row-end: 2;
-  grid-row-start: 1;
-}
+          div.w-row:before {
+            content: " ";
+            display: table;
+            grid-column-end: 2;
+            grid-column-start: 1;
+            grid-row-end: 2;
+            grid-row-start: 1;
+          }
 
-div.footer-column.w-clearfix.w-col.w-col-4 {
-  box-sizing: border-box;
-  float: left;
-  min-height: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: relative;
-  width: 33.3333%;
-}
+          div.footer-column.w-clearfix.w-col.w-col-4 {
+            box-sizing: border-box;
+            float: left;
+            min-height: 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+            width: 33.3333%;
+          }
 
-div.footer-column.w-clearfix.w-col.w-col-4:after {
-  clear: both;
-  content: " ";
-  display: table;
-  grid-column-end: 2;
-  grid-column-start: 1;
-  grid-row-end: 2;
-  grid-row-start: 1;
-}
+          div.footer-column.w-clearfix.w-col.w-col-4:after {
+            clear: both;
+            content: " ";
+            display: table;
+            grid-column-end: 2;
+            grid-column-start: 1;
+            grid-row-end: 2;
+            grid-row-start: 1;
+          }
 
-div.footer-column.w-clearfix.w-col.w-col-4:before {
-  content: " ";
-  display: table;
-  grid-column-end: 2;
-  grid-column-start: 1;
-  grid-row-end: 2;
-  grid-row-start: 1;
-}
+          div.footer-column.w-clearfix.w-col.w-col-4:before {
+            content: " ";
+            display: table;
+            grid-column-end: 2;
+            grid-column-start: 1;
+            grid-row-end: 2;
+            grid-row-start: 1;
+          }
 
-img.failory-logo-image {
-  border-width: 0;
-  box-sizing: border-box;
-  display: inline-block;
-  float: left;
-  max-width: 100%;
-  vertical-align: middle;
-}
+          img.failory-logo-image {
+            border-width: 0;
+            box-sizing: border-box;
+            display: inline-block;
+            float: left;
+            max-width: 100%;
+            vertical-align: middle;
+          }
 
-h3.footer-failory-name {
-  box-sizing: border-box;
-  color: #ffffff;
-  display: block;
-  font-family: Lato, sans-serif;
-  font-size: 20px;
-  font-weight: 900;
-  line-height: 1.1em;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-top: 24px;
-}
+          h3.footer-failory-name {
+            box-sizing: border-box;
+            color: #ffffff;
+            display: block;
+            font-family: Lato, sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 1.1em;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-top: 24px;
+          }
 
-p.footer-description-failory {
-  box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.8);
-  display: block;
-  font-family: Lato, sans-serif;
-  font-size: 17px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  line-height: 1.5em;
-  margin-bottom: 16px;
-  margin-top: 15px;
-}
+          p.footer-description-failory {
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.8);
+            display: block;
+            font-family: Lato, sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            line-height: 1.5em;
+            margin-bottom: 16px;
+            margin-top: 15px;
+          }
 
-br {
-  box-sizing: border-box;
-}
+          br {
+            box-sizing: border-box;
+          }
 
-div.footer-column.w-col.w-col-8 {
-  box-sizing: border-box;
-  float: left;
-  min-height: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: relative;
-  width: 66.6667%;
-}
+          div.footer-column.w-col.w-col-8 {
+            box-sizing: border-box;
+            float: left;
+            min-height: 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+            width: 66.6667%;
+          }
 
-div.w-col.w-col-8 {
-  box-sizing: border-box;
-  float: left;
-  min-height: 1px;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-  width: 66.6667%;
-}
+          div.w-col.w-col-8 {
+            box-sizing: border-box;
+            float: left;
+            min-height: 1px;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            width: 66.6667%;
+          }
 
-div.w-col.w-col-7.w-col-small-6.w-col-tiny-7 {
-  box-sizing: border-box;
-  float: left;
-  min-height: 1px;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-  width: 58.3333%;
-}
+          div.w-col.w-col-7.w-col-small-6.w-col-tiny-7 {
+            box-sizing: border-box;
+            float: left;
+            min-height: 1px;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            width: 58.3333%;
+          }
 
-h3.footer-titles {
-  box-sizing: border-box;
-  color: #ffffff;
-  display: block;
-  font-family: Lato, sans-serif;
-  font-size: 20px;
-  font-weight: 900;
-  line-height: 1.1em;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-top: 24px;
-}
+          h3.footer-titles {
+            box-sizing: border-box;
+            color: #ffffff;
+            display: block;
+            font-family: Lato, sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 1.1em;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-top: 24px;
+          }
 
-p.footer-links {
-  box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.8);
-  display: block;
-  font-family: Lato, sans-serif;
-  font-size: 17px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  line-height: 1.8em;
-  margin-bottom: 16px;
-  margin-top: 2px;
-}
+          p.footer-links {
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.8);
+            display: block;
+            font-family: Lato, sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            line-height: 1.8em;
+            margin-bottom: 16px;
+            margin-top: 2px;
+          }
 
-a {
-  background-color: transparent;
-  box-sizing: border-box;
-  color: #ffffff;
-  font-family: Lato, sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1.2em;
-  text-decoration: none;
-}
+          a {
+            background-color: transparent;
+            box-sizing: border-box;
+            color: #ffffff;
+            font-family: Lato, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1.2em;
+            text-decoration: none;
+          }
 
-a:active {
-  outline: 0;
-}
+          a:active {
+            outline: 0;
+          }
 
-a:hover {
-  outline: 0;
-}
+          a:hover {
+            outline: 0;
+          }
 
-span.footer-link {
-  box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 300;
-}
+          span.footer-link {
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+          }
 
-span.footer-link:hover {
-  color: #ffffff;
-  font-weight: 400;
-}
+          span.footer-link:hover {
+            color: #ffffff;
+            font-weight: 400;
+          }
 
-span {
-  box-sizing: border-box;
-}
+          span {
+            box-sizing: border-box;
+          }
 
-strong {
-  box-sizing: border-box;
-  font-weight: 700;
-}
+          strong {
+            box-sizing: border-box;
+            font-weight: 700;
+          }
 
-div.w-col.w-col-5.w-col-small-6.w-col-tiny-5 {
-  box-sizing: border-box;
-  float: left;
-  min-height: 1px;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-  width: 41.6667%;
-}
+          div.w-col.w-col-5.w-col-small-6.w-col-tiny-5 {
+            box-sizing: border-box;
+            float: left;
+            min-height: 1px;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            width: 41.6667%;
+          }
 
-div.column-center-mobile.w-col.w-col-4 {
-  box-sizing: border-box;
-  float: left;
-  min-height: 1px;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-  width: 33.3333%;
-}
+          div.column-center-mobile.w-col.w-col-4 {
+            box-sizing: border-box;
+            float: left;
+            min-height: 1px;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            width: 33.3333%;
+          }
 
-a.footer-social-network-icons.w-inline-block {
-  background-color: transparent;
-  box-sizing: border-box;
-  color: #ffffff;
-  display: inline-block;
-  font-family: Lato, sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1.2em;
-  margin-right: 8px;
-  margin-top: 10px;
-  max-width: 100%;
-  opacity: 0.8;
-  text-decoration: none;
-}
+          a.footer-social-network-icons.w-inline-block {
+            background-color: transparent;
+            box-sizing: border-box;
+            color: #ffffff;
+            display: inline-block;
+            font-family: Lato, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1.2em;
+            margin-right: 8px;
+            margin-top: 10px;
+            max-width: 100%;
+            opacity: 0.8;
+            text-decoration: none;
+          }
 
-a.footer-social-network-icons.w-inline-block:active {
-  outline: 0;
-}
+          a.footer-social-network-icons.w-inline-block:active {
+            outline: 0;
+          }
 
-a.footer-social-network-icons.w-inline-block:hover {
-  opacity: 1;
-  outline: 0;
-}
+          a.footer-social-network-icons.w-inline-block:hover {
+            opacity: 1;
+            outline: 0;
+          }
 
-img {
-  border-width: 0;
-  box-sizing: border-box;
-  display: inline-block;
-  max-width: 100%;
-  vertical-align: middle;
-}
+          img {
+            border-width: 0;
+            box-sizing: border-box;
+            display: inline-block;
+            max-width: 100%;
+            vertical-align: middle;
+          }
 
-p.footer-description {
-  box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.8);
-  display: block;
-  font-family: Lato, sans-serif;
-  font-size: 17px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  line-height: 1.5em;
-  margin-bottom: 16px;
-  margin-top: 15px;
-}
+          p.footer-description {
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.8);
+            display: block;
+            font-family: Lato, sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            line-height: 1.5em;
+            margin-bottom: 16px;
+            margin-top: 15px;
+          }
 
-strong.link-email-footer {
-  box-sizing: border-box;
-  font-weight: 700;
-}
-
-</style>
+          strong.link-email-footer {
+            box-sizing: border-box;
+            font-weight: 700;
+          }
+        </style>
 
 
 
